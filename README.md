@@ -217,4 +217,51 @@ For support and questions:
 
 ---
 
+## INTEGRATING CHATBOT TO SHOPIFY DUMMY WEBSITE 
+# Shopify Chatbot Integration Guide
+
+This guide will help you integrate your Flask-based Shopify chatbot with your dummy website and make API calls to interact with it.
+
+---
+
+## 1. Start the Chatbot Backend
+
+1. **Activate your virtual environment:**
+   ```bash
+   source venv/bin/activate
+   ```
+
+2. **Run the Flask app:**
+   ```bash
+   python data/app.py
+   ```
+   By default, this will start your chatbot backend on `http://localhost:5000`.
+
+---
+
+## 2. Expose the Backend to the Internet (Optional, for public access)
+
+If you want your website to access the backend from anywhere (not just localhost), use ngrok:
+
+1. **Install your ngrok authtoken** (if you haven’t already):
+   ```bash
+   ngrok config add-authtoken YOUR_AUTHTOKEN
+   ```
+
+3. **To fetch The API Run this command**
+    python data/app.py api
+
+2. **Expose port 5000:**
+   ```bash
+   ngrok http 5000
+   ```
+   Copy the HTTPS URL ngrok provides (e.g., `https://abcd1234.ngrok.io`).
+---
+
+## 3. Add Chatbot UI to Your Dummy Website
+Add html,css,js (event handling) code in the dummy shopify website in the footer.liquid 
+
+
+**Note:**  - Replace `API_URL` with your ngrok URL if you are using ngrok (e.g., `https://abcd1234.ngrok.io/chat`).
+
 **Note**: This chatbot is designed for development and testing purposes. For production use, consider implementing additional security measures, error handling, and scalability features. 
