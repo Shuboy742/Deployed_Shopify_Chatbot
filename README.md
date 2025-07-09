@@ -143,19 +143,6 @@ The chatbot uses Google Gemini 2.0 Flash with LangChain to provide:
 
 ## 🔧 Customization
 
-### Adding New Product Fields
-
-To include additional product information, modify the context generation in `data/app.py`:
-
-```python
-context = "\n".join([
-    f"Product ID: {product.get('id', 'N/A')}\n"
-    f"Title: {product.get('title', '')}\n"
-    # Add your custom fields here
-    f"Custom Field: {product.get('custom_field', 'N/A')}\n"
-    for product in product_data
-])
-```
 
 ### Modifying AI Prompts
 
@@ -187,7 +174,7 @@ prompt_template = PromptTemplate(
    - Ensure virtual environment is activated
    - Install missing packages: `pip install package_name`
 
-## 📝 Dependencies
+##  Dependencies
 
 - `langchain-google-genai`: Google Gemini AI integration
 - `langchain-core`: Core LangChain functionality
@@ -203,10 +190,6 @@ prompt_template = PromptTemplate(
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ##  Support
 
@@ -249,7 +232,9 @@ If you want your website to access the backend from anywhere (not just localhost
    ```
 
 3. **To fetch The API Run this command**
-    python data/app.py api
+    ```bash
+   python data/app.py api
+   ```
 
 2. **Expose port 5000:**
    ```bash
@@ -265,3 +250,10 @@ Add html,css,js (event handling) code in the dummy shopify website in the footer
 **Note:**  - Replace `API_URL` with your ngrok URL if you are using ngrok (e.g., `https://abcd1234.ngrok.io/chat`).
 
 **Note**: This chatbot is designed for development and testing purposes. For production use, consider implementing additional security measures, error handling, and scalability features. 
+
+**Results**
+![Screenshot from 2025-07-09 15-11-50](https://github.com/user-attachments/assets/72f43358-29fe-4637-94df-d584cd52daae)
+
+![Screenshot from 2025-07-09 15-12-47](https://github.com/user-attachments/assets/c1886954-30d6-4262-999d-9962eb0dba3e)
+
+
