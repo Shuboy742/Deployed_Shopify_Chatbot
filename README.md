@@ -258,5 +258,11 @@ Add html,css,js (event handling) code in the dummy shopify website in the footer
 
 ![cb](https://github.com/user-attachments/assets/2c647789-3cd4-4cea-be8e-39a3ad8a4af1)
 
+<img width="1291" height="670" alt="cb" src="https://github.com/user-attachments/assets/8915b323-121f-4674-a23c-78bd4cea0faf" />
+
+<img width="1293" height="625" alt="cb1" src="https://github.com/user-attachments/assets/e7b2170f-9697-4968-9842-f75fb76ddfa3" />
+
+
+
 
 
