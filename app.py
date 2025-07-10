@@ -1,8 +1,11 @@
 import os
 import json
+import subprocess
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import markdown  # Add this import at the top
+import threading
+import time
 
 # Load the product data
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -119,15 +122,61 @@ CORS(app)
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    data = request.json
-    user_query = data.get('message', '') if data else ''
-    if not user_query:
-        return jsonify({'error': 'No message provided'}), 400
-    answer = generate_chatbot_response(user_query, products)
-    return jsonify({'response': answer})
+    import subprocess
+    import traceback
+    try:
+        # Run scraper.py to update products.json
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        scraper_path = os.path.join(script_dir, 'scraper.py')
+        result = subprocess.run(['python3', scraper_path], check=True, capture_output=True, text=True)
+        # Reload the latest product data
+        products_file = os.path.join(script_dir, 'products.json')
+        with open(products_file, 'r') as json_file:
+            products_latest = json.load(json_file)
+        data = request.json
+        user_query = data.get('message', '') if data else ''
+        if not user_query:
+            return jsonify({'error': 'No message provided'}), 400
+        answer = generate_chatbot_response(user_query, products_latest)
+        return jsonify({'response': answer})
+    except subprocess.CalledProcessError as e:
+        print('Error running scraper.py:', e)
+        print('Scraper output:', e.output)
+        print('Scraper stderr:', e.stderr)
+        return jsonify({'error': 'Failed to update product data. Please try again later.'}), 500
+    except json.JSONDecodeError as e:
+        print('Error decoding products.json:', e)
+        return jsonify({'error': 'Product data is corrupted. Please try again later.'}), 500
+    except Exception as e:
+        print('Unexpected error:', e)
+        traceback.print_exc()
+        return jsonify({'error': 'An unexpected error occurred. Please try again later.'}), 500
+
+def periodic_scrape(interval=300):  # 300 seconds = 5 minutes
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    scraper_path = os.path.join(script_dir, 'scraper.py')
+    while True:
+        try:
+            subprocess.run(['python3', scraper_path], check=True)
+            print("Product data updated in background.")
+        except Exception as e:
+            print("Error running scraper in background:", e)
+        time.sleep(interval)
+
+# Start background thread
+threading.Thread(target=periodic_scrape, args=(300,), daemon=True).start()
 
 if __name__ == "__main__":
     import sys
+    import subprocess
+    # Run scraper.py once at server startup
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    scraper_path = os.path.join(script_dir, 'scraper.py')
+    try:
+        subprocess.run(['python3', scraper_path], check=True)
+        print("Initial product data loaded.")
+    except Exception as e:
+        print("Error running scraper at startup:", e)
     if len(sys.argv) > 1 and sys.argv[1] == 'api':
         app.run(host="0.0.0.0", port=5000)
     else:
