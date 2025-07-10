@@ -256,4 +256,7 @@ Add html,css,js (event handling) code in the dummy shopify website in the footer
 
 ![Screenshot from 2025-07-09 15-12-47](https://github.com/user-attachments/assets/c1886954-30d6-4262-999d-9962eb0dba3e)
 
+![cb](https://github.com/user-attachments/assets/2c647789-3cd4-4cea-be8e-39a3ad8a4af1)
+
+
 
