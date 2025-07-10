@@ -1,5 +1,8 @@
 import requests
 import json
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import SHOPIFY_API_KEY, SHOP_NAME
 
 def fetch_products_from_api():
@@ -37,7 +40,7 @@ def fetch_products_from_api():
 
         with open("data/products.json", "w") as f:
             json.dump(products, f, indent=4)
-        print(f"Successfully saved {len(products)} products to data/shopify_products.json")
+        print(f"Successfully saved {len(products)} products to data/products.json")
         return products
         
     except Exception as e:
