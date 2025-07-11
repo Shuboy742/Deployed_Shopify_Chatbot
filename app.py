@@ -1,21 +1,38 @@
 import os
 import json
-import subprocess
+import requests
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import markdown  # Add this import at the top
-import threading
-import time
+import markdown
+from dotenv import load_dotenv
 
-# Load the product data
-script_dir = os.path.dirname(os.path.abspath(__file__))
-products_file = os.path.join(script_dir, 'products.json')
-with open(products_file, 'r') as json_file:
-    products = json.load(json_file)
+load_dotenv()
 
-# Shop configuration
 SHOP_NAME = "mffws4-kk"
 SHOP_URL = f"https://{SHOP_NAME}.myshopify.com"
+SHOPIFY_ACCESS_TOKEN = os.getenv("SHOPIFY_API_KEY")
+products_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'products.json')
+
+def fetch_latest_products():
+    if not SHOPIFY_ACCESS_TOKEN:
+        print("Warning: SHOPIFY_ACCESS_TOKEN not set. Using cached data.")
+        return []
+    try:
+        url = f"https://{SHOP_NAME}.myshopify.com/admin/api/2023-01/products.json"
+        headers = {
+            "X-Shopify-Access-Token": SHOPIFY_ACCESS_TOKEN,
+            "Content-Type": "application/json"
+        }
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        products_data = response.json().get('products', [])
+        with open(products_file, 'w') as f:
+            json.dump(products_data, f, indent=2)
+        print(f"Fetched {len(products_data)} products from Shopify (webhook)")
+        return products_data
+    except Exception as e:
+        print(f"Error fetching products from Shopify: {e}")
+        return []
 
 def find_product_by_name(query, product_data):
     """Find products that match the search query"""
@@ -116,21 +133,23 @@ def generate_chatbot_response(query, product_data, memory=None):
         else:
             return "I'm here to help with product information, pricing, and shipping questions. What would you like to know?"
 
-# Flask API setup
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/webhook/products', methods=['POST'])
+def shopify_webhook():
+    try:
+        print("Webhook received, about to fetch products")
+        latest_products = fetch_latest_products()
+        print("Fetched and wrote products:", len(latest_products))
+        return jsonify({'status': 'success'}), 200
+    except Exception as e:
+        print(f"Webhook error: {e}")
+        return jsonify({'error': 'Webhook processing failed'}), 500
+
 @app.route('/chat', methods=['POST'])
 def chat():
-    import subprocess
-    import traceback
     try:
-        # Run scraper.py to update products.json
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        scraper_path = os.path.join(script_dir, 'scraper.py')
-        result = subprocess.run(['python3', scraper_path], check=True, capture_output=True, text=True)
-        # Reload the latest product data
-        products_file = os.path.join(script_dir, 'products.json')
         with open(products_file, 'r') as json_file:
             products_latest = json.load(json_file)
         data = request.json
@@ -139,44 +158,17 @@ def chat():
             return jsonify({'error': 'No message provided'}), 400
         answer = generate_chatbot_response(user_query, products_latest)
         return jsonify({'response': answer})
-    except subprocess.CalledProcessError as e:
-        print('Error running scraper.py:', e)
-        print('Scraper output:', e.output)
-        print('Scraper stderr:', e.stderr)
-        return jsonify({'error': 'Failed to update product data. Please try again later.'}), 500
-    except json.JSONDecodeError as e:
-        print('Error decoding products.json:', e)
-        return jsonify({'error': 'Product data is corrupted. Please try again later.'}), 500
     except Exception as e:
         print('Unexpected error:', e)
-        traceback.print_exc()
-        return jsonify({'error': 'An unexpected error occurred. Please try again later.'}), 500
-
-def periodic_scrape(interval=300):  # 300 seconds = 5 minutes
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    scraper_path = os.path.join(script_dir, 'scraper.py')
-    while True:
-        try:
-            subprocess.run(['python3', scraper_path], check=True)
-            print("Product data updated in background.")
-        except Exception as e:
-            print("Error running scraper in background:", e)
-        time.sleep(interval)
-
-# Start background thread
-threading.Thread(target=periodic_scrape, args=(300,), daemon=True).start()
+        return jsonify({'error': 'An unexpected error occurred.'}), 500
 
 if __name__ == "__main__":
     import sys
-    import subprocess
-    # Run scraper.py once at server startup
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    scraper_path = os.path.join(script_dir, 'scraper.py')
-    try:
-        subprocess.run(['python3', scraper_path], check=True)
-        print("Initial product data loaded.")
-    except Exception as e:
-        print("Error running scraper at startup:", e)
+    print("Fetching initial product data...")
+    fetch_latest_products()
+    print("Initial product data loaded.")
+
+    # If 'api' is passed as an argument, run Flask API
     if len(sys.argv) > 1 and sys.argv[1] == 'api':
         app.run(host="0.0.0.0", port=5000)
     else:
@@ -186,5 +178,12 @@ if __name__ == "__main__":
             if user_query.lower() in ['quit', 'exit', 'bye']:
                 print("Goodbye!")
                 break
-            answer = generate_chatbot_response(user_query, products)
+            # Always use the latest products.json
+            try:
+                with open(products_file, 'r') as json_file:
+                    products_latest = json.load(json_file)
+            except Exception as e:
+                print("Error loading products:", e)
+                products_latest = []
+            answer = generate_chatbot_response(user_query, products_latest)
             print(f"Bot: {answer}\n")
