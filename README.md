@@ -246,18 +246,21 @@ If you want your website to access the backend from anywhere (not just localhost
 ## 3. Add Chatbot UI to Your Dummy Website
 Add html,css,js (event handling) code in the dummy shopify website in the footer.liquid 
 
-
-**Note:**  - Replace `API_URL` with your ngrok URL if you are using ngrok (e.g., `https://abcd1234.ngrok.io/chat`).
-
-**Note**: This chatbot is designed for development and testing purposes. For production use, consider implementing additional security measures, error handling, and scalability features. 
-
-**Commands to run webhooks**
+## 4. Commands to run webhooks
 python3 data/app.py api
 ngrok http 5000
 
 Paste this url in frontend api and shopify webhook
+
 everytime the ngrok url gets changed 
+
 https://your-ngrok-link/webhook/products
+
+**Note for (4.)**-if you run this file app.py no need to use scraper.py file. If the admin adds the product the backend will automatically call the webhooks and link to the frontend and the chatbot will give real time responses.
+
+**Note:**  - Replace `API_URL` with your ngrok URL if you are using ngrok (e.g., `https://abcd1234.ngrok.io/chat`).
+
+**Note**: This chatbot is designed for development and testing purposes. For production use, consider implementing additional security measures, error handling, and scalability features. 
 
 
 **Results**
