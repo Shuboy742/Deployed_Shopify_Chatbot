@@ -251,6 +251,15 @@ Add html,css,js (event handling) code in the dummy shopify website in the footer
 
 **Note**: This chatbot is designed for development and testing purposes. For production use, consider implementing additional security measures, error handling, and scalability features. 
 
+**Commands to run webhooks**
+python3 data/app.py api
+ngrok http 5000
+
+Paste this url in frontend api and shopify webhook
+everytime the ngrok url gets changed 
+https://your-ngrok-link/webhook/products
+
+
 **Results**
 ![Screenshot from 2025-07-09 15-11-50](https://github.com/user-attachments/assets/72f43358-29fe-4637-94df-d584cd52daae)
 
