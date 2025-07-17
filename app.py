@@ -6,6 +6,7 @@ from flask_cors import CORS
 import markdown
 from dotenv import load_dotenv
 import re
+import threading
 
 load_dotenv()
 
@@ -14,14 +15,106 @@ SHOP_URL = f"https://ecommerce-test-store-demo.myshopify.com"
 SHOPIFY_ACCESS_TOKEN = os.getenv("SHOPIFY_API_KEY")
 products_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'products.json')
 
+# Store currency (will be fetched from Shopify)
+STORE_CURRENCY = "USD"  # Default fallback
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+
+# Directory to store chat histories
+CHAT_HISTORY_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chat_histories')
+os.makedirs(CHAT_HISTORY_DIR, exist_ok=True)
+
+# Thread lock for file safety
+chat_history_lock = threading.Lock()
+
+def get_chat_history(user_id):
+    """Load chat history for a user from file."""
+    path = os.path.join(CHAT_HISTORY_DIR, f"{user_id}.json")
+    if not os.path.exists(path):
+        return []
+    with chat_history_lock:
+        try:
+            with open(path, 'r') as f:
+                return json.load(f)
+        except Exception:
+            return []
+
+def save_chat_history(user_id, history):
+    """Save chat history for a user to file."""
+    path = os.path.join(CHAT_HISTORY_DIR, f"{user_id}.json")
+    with chat_history_lock:
+        with open(path, 'w') as f:
+            json.dump(history, f, indent=2)
+
+def fetch_store_currency():
+    """Fetch the store's currency from Shopify API"""
+    global STORE_CURRENCY
+    if not SHOPIFY_ACCESS_TOKEN:
+        print("Warning: SHOPIFY_ACCESS_TOKEN not set. Using default currency.")
+        return STORE_CURRENCY
+    
+    try:
+        url = f"https://{SHOP_NAME}.myshopify.com/admin/api/2023-01/shop.json"
+        headers = {
+            "X-Shopify-Access-Token": SHOPIFY_ACCESS_TOKEN,
+            "Content-Type": "application/json"
+        }
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        shop_data = response.json().get('shop', {})
+        currency = shop_data.get('currency', STORE_CURRENCY)
+        STORE_CURRENCY = currency
+        print(f"Store currency: {currency}")
+        return currency
+    except Exception as e:
+        print(f"Error fetching store currency: {e}")
+        return STORE_CURRENCY
+
+def get_currency_symbol(currency_code):
+    """Get currency symbol from currency code"""
+    currency_symbols = {
+        'USD': '$',
+        'INR': '₹',
+        'EUR': '€',
+        'GBP': '£',
+        'CAD': 'C$',
+        'AUD': 'A$',
+        'JPY': '¥',
+        'CNY': '¥',
+        'KRW': '₩',
+        'RUB': '₽',
+        'BRL': 'R$',
+        'MXN': '$',
+        'SGD': 'S$',
+        'HKD': 'HK$',
+        'NZD': 'NZ$',
+        'CHF': 'CHF',
+        'SEK': 'kr',
+        'NOK': 'kr',
+        'DKK': 'kr',
+        'PLN': 'zł',
+        'CZK': 'Kč',
+        'HUF': 'Ft',
+        'ILS': '₪',
+        'TRY': '₺',
+        'ZAR': 'R',
+        'THB': '฿',
+        'MYR': 'RM',
+        'PHP': '₱',
+        'IDR': 'Rp',
+        'VND': '₫'
+    }
+    return currency_symbols.get(currency_code, currency_code)
 
 def fetch_latest_products():
     if not SHOPIFY_ACCESS_TOKEN:
         print("Warning: SHOPIFY_ACCESS_TOKEN not set. Using cached data.")
         return []
     try:
+        # Fetch store currency first
+        fetch_store_currency()
+        
         url = f"https://{SHOP_NAME}.myshopify.com/admin/api/2023-01/products.json"
         headers = {
             "X-Shopify-Access-Token": SHOPIFY_ACCESS_TOKEN,
@@ -81,8 +174,13 @@ def format_product_card(product):
         if 'color' in opt.get('name', '').lower():
             color = ', '.join(opt.get('values', []))
     link = generate_product_link(product)
+    
+    # Format price with correct currency
+    currency_symbol = get_currency_symbol(STORE_CURRENCY)
+    formatted_price = f"{currency_symbol}{price}" if price != 'N/A' else 'N/A'
+    
     card = f"🛍️ **{title}**\n"
-    card += f"💰 Price: ₹{price}\n"
+    card += f"💰 Price: {formatted_price}\n"
     card += f"📄 {desc}\n"
     if tags:
         card += f"🏷️ Tags: {tags}\n"
@@ -171,13 +269,16 @@ def generate_chatbot_response(query, products, memory=None):
 
 def format_product_data_for_prompt(products):
     entries = []
+    currency_symbol = get_currency_symbol(STORE_CURRENCY)
     for product in products:
+        price = product.get("variants", [{}])[0].get("price", "")
+        formatted_price = f"{currency_symbol}{price}" if price else ""
         entry = {
             "title": product.get("title", ""),
             "vendor": product.get("vendor", ""),
             "tags": product.get("tags", ""),
             "handle": product.get("handle", ""),
-            "price": product.get("variants", [{}])[0].get("price", ""),
+            "price": formatted_price,
             "description": (product.get("body_html") or product.get("product_type", ""))[:200]
         }
         entries.append(entry)
@@ -228,9 +329,25 @@ def chat():
             products_latest = json.load(json_file)
         data = request.get_json(silent=True)
         user_query = data.get('message', '') if data else ''
+        user_id = data.get('user_id', 'default_user') if data else 'default_user'
         if not user_query:
             return jsonify({'error': 'No message provided'}), 400
+
+        # Load chat history
+        chat_history = get_chat_history(user_id)
+        # Append new user message
+        chat_history.append({'role': 'user', 'message': user_query})
+
+        # Prepare context for Gemini: last 5 messages (user+bot)
+        context_messages = []
+        for msg in chat_history[-10:]:
+            prefix = 'User:' if msg['role'] == 'user' else 'Bot:'
+            context_messages.append(f"{prefix} {msg['message']}")
         context = format_product_data_for_prompt(products_latest)
+        # Add chat history context to prompt
+        if context_messages:
+            context = f"Chat History:\n{chr(10).join(context_messages)}\n\nProduct Catalog:\n{context}"
+
         answer = query_gemini(user_query, context)
 
         # Replace product name with clickable markdown link, and do not show the raw link
@@ -239,13 +356,24 @@ def chat():
             title_lower = title.lower()
             link = generate_product_link(product)
             if title and link and title_lower in answer.lower():
-                # Replace all occurrences of the product name with a markdown link
                 answer = re.sub(rf'(?<!\[){re.escape(title)}(?!\])', f'[{title}]({link})', answer)
+
+        # Append bot response to chat history and save
+        chat_history.append({'role': 'bot', 'message': answer})
+        save_chat_history(user_id, chat_history)
 
         return jsonify({'response': answer})
     except Exception as e:
         print('Unexpected error:', e)
         return jsonify({'error': 'An unexpected error occurred.'}), 500
+
+# (Optional) Endpoint to fetch chat history for a user
+@app.route('/history', methods=['POST'])
+def get_history():
+    data = request.get_json(silent=True)
+    user_id = data.get('user_id', 'default_user') if data else 'default_user'
+    history = get_chat_history(user_id)
+    return jsonify({'history': history})
 
 if __name__ == "__main__":
     import sys
