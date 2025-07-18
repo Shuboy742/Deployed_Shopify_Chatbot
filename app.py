@@ -74,21 +74,21 @@ def fetch_store_currency():
 def get_currency_symbol(currency_code):
     """Get currency symbol from currency code"""
     currency_symbols = {
-        'USD': '$',
+        'USD': 'USD',
         'INR': '₹',
         'EUR': '€',
         'GBP': '£',
-        'CAD': 'C$',
-        'AUD': 'A$',
+        'CAD': 'CAD',
+        'AUD': 'AUD',
         'JPY': '¥',
         'CNY': '¥',
         'KRW': '₩',
         'RUB': '₽',
-        'BRL': 'R$',
-        'MXN': '$',
-        'SGD': 'S$',
-        'HKD': 'HK$',
-        'NZD': 'NZ$',
+        'BRL': 'BRL',
+        'MXN': 'MXN',
+        'SGD': 'SGD',
+        'HKD': 'HKD',
+        'NZD': 'NZD',
         'CHF': 'CHF',
         'SEK': 'kr',
         'NOK': 'kr',
@@ -106,6 +106,35 @@ def get_currency_symbol(currency_code):
         'VND': '₫'
     }
     return currency_symbols.get(currency_code, currency_code)
+
+def extract_colors_from_product(product):
+    """Extract colors directly from product JSON structure"""
+    colors = []
+    
+    # Method 1: Get colors from product options where name is "Color"
+    for option in product.get('options', []):
+        if option.get('name', '').lower() == 'color':
+            colors.extend(option.get('values', []))
+    
+    # Method 2: Get colors from variants option1 (if not already found)
+    if not colors:
+        for variant in product.get('variants', []):
+            option1 = variant.get('option1')
+            if option1 and option1.lower() != 'default title':
+                colors.append(option1)
+    
+    # Filter out currency values and other non-color strings
+    filtered_colors = []
+    for color in colors:
+        # Skip if it contains currency symbols or looks like a price
+        if (not re.search(r'[\$€£¥₹₽₩₪₺₫₱₿]', color) and  # No currency symbols
+            not re.search(r'\d+\.?\d*', color) and  # No numbers (prices)
+            not color.lower() in ['default', 'default title', 'title'] and  # No default values
+            len(color.strip()) > 0):  # Not empty
+            filtered_colors.append(color)
+    
+    # Remove duplicates and return
+    return list(set(filtered_colors))
 
 def fetch_latest_products():
     if not SHOPIFY_ACCESS_TOKEN:
@@ -131,28 +160,115 @@ def fetch_latest_products():
         print(f"Error fetching products from Shopify: {e}")
         return []
 
-def find_product_by_name(query, product_data):
-    """Find products that match the search query"""
+def find_products_by_color(query, products):
+    """Find products that have the specified color based on JSON data"""
     query_lower = query.lower()
     matching_products = []
     
-    # Common words to remove from search
-    stop_words = ['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'link', 'url', 'buy', 'purchase', 'provide', 'give', 'me', 'please', 'can', 'you']
-    
-    # Clean the query
-    words = query_lower.split()
-    search_terms = [word for word in words if word not in stop_words and len(word) > 2]
-    
-    for product in product_data:
-        title_lower = product.get('title', '').lower()
+    for product in products:
+        product_colors = extract_colors_from_product(product)
+        product_colors_lower = [color.lower() for color in product_colors]
         
-        # Check if any search term matches the product title
-        for term in search_terms:
-            if term in title_lower:
-                matching_products.append(product)
-                break
+        # Check if query color matches any product color
+        if query_lower in product_colors_lower:
+            matching_products.append(product)
     
     return matching_products
+
+def find_product_by_name(product_name, products):
+    """Find a specific product by name"""
+    product_name_lower = product_name.lower()
+    
+    for product in products:
+        title = product.get('title', '').lower()
+        if product_name_lower in title or title in product_name_lower:
+            return product
+    return None
+
+def get_product_colors(product):
+    """Get colors for a specific product"""
+    if not product:
+        return []
+    
+    colors = extract_colors_from_product(product)
+    return colors
+
+def find_products_by_keyword(query, products):
+    """Find products that match the query keywords"""
+    query_lower = query.lower()
+    keywords = [w for w in query_lower.split() if len(w) > 2]
+    matches = []
+    
+    # First, try exact product name matching (most specific)
+    for product in products:
+        title = product.get('title', '').lower()
+        # Check if the query contains the exact product title or vice versa
+        if title in query_lower or query_lower in title:
+            matches.append(product)
+            return matches  # Return immediately for exact match
+    
+    # If no exact match, try partial title matching
+    for product in products:
+        title = product.get('title', '').lower()
+        # Check if any keyword is in the product title
+        if any(keyword in title for keyword in keywords):
+            matches.append(product)
+    
+    # If still no matches, try broader matching
+    if not matches:
+        for product in products:
+            title = product.get('title', '').lower()
+            tags = product.get('tags', '').lower()
+            vendor = product.get('vendor', '').lower()
+            product_type = product.get('product_type', '').lower()
+            body_html = (product.get('body_html') or '').lower()
+            
+            if any(k in title or k in tags or k in vendor or k in product_type or k in body_html for k in keywords):
+                matches.append(product)
+    
+    return matches
+
+def get_all_available_colors(products):
+    """Get all available colors from the product data"""
+    all_colors = set()
+    
+    for product in products:
+        colors = extract_colors_from_product(product)
+        all_colors.update(colors)
+    
+    return sorted(list(all_colors))
+
+def find_matching_products(query, products):
+    query = query.lower()
+    keywords = [w for w in query.split() if len(w) > 2]
+    matches = []
+    
+    # Get all available colors from the data
+    all_colors = get_all_available_colors(products)
+    all_colors_lower = [color.lower() for color in all_colors]
+    
+    # Check if query contains any available color
+    query_has_colors = any(color in query for color in all_colors_lower)
+    
+    if query_has_colors:
+        # Find products with the specific color
+        for color in all_colors:
+            if color.lower() in query:
+                color_products = find_products_by_color(color, products)
+                matches.extend(color_products)
+    else:
+        # Use the new helper function for keyword matching
+        matches = find_products_by_keyword(query, products)
+    
+    # Remove duplicates
+    seen_ids = set()
+    unique_matches = []
+    for product in matches:
+        if product.get('id') not in seen_ids:
+            seen_ids.add(product.get('id'))
+            unique_matches.append(product)
+    
+    return unique_matches
 
 def generate_product_link(product):
     """Generate the product URL"""
@@ -168,11 +284,11 @@ def format_product_card(product):
     desc = desc[:90] + ('...' if len(desc) > 90 else '') if desc else 'No description available.'
     tags = product.get('tags', '')
     vendor = product.get('vendor', 'Unknown Vendor')
-    # Try to get color from options
-    color = None
-    for opt in product.get('options', []):
-        if 'color' in opt.get('name', '').lower():
-            color = ', '.join(opt.get('values', []))
+    
+    # Get colors directly from JSON data
+    colors = extract_colors_from_product(product)
+    color_display = ', '.join(colors) if colors else 'No color options'
+    
     link = generate_product_link(product)
     
     # Format price with correct currency
@@ -184,36 +300,66 @@ def format_product_card(product):
     card += f"📄 {desc}\n"
     if tags:
         card += f"🏷️ Tags: {tags}\n"
-    if color:
-        card += f"🎨 Available colors: {color}\n"
+    card += f"🎨 Available colors: {color_display}\n"
     card += f"🏢 Vendor: {vendor}\n"
     if link:
         card += f"🔗 [View Product]({link})"
     return card
 
-def find_matching_products(query, products):
-    query = query.lower()
-    keywords = [w for w in query.split() if len(w) > 2]
-    matches = []
-    for product in products:
-        title = product.get('title', '').lower()
-        tags = product.get('tags', '').lower()
-        vendor = product.get('vendor', '').lower()
-        options = ' '.join([str(opt.get('values', '')) for opt in product.get('options', [])]).lower()
-        if any(k in title or k in tags or k in vendor or k in options for k in keywords):
-            matches.append(product)
-    return matches
-
 def generate_chatbot_response(query, products, memory=None):
     query_lower = query.lower()
+    
+    # Get all available colors from the data
+    all_colors = get_all_available_colors(products)
+    all_colors_lower = [color.lower() for color in all_colors]
+    
+    # Check if query mentions colors
+    query_has_colors = any(color in query_lower for color in all_colors_lower)
+    query_mentions_color = any(word in query_lower for word in ['color', 'colour', 'coor', 'colors', 'colours'])
+    
     # Greetings
     if any(word in query_lower for word in ['hello', 'hi', 'hey']):
         return "👋 Hello! How can I assist you with our products?"
+    
+    # Product-specific color queries (e.g., "snowboard color options", "complete snowboard colors")
+    if query_mentions_color and not query_has_colors:
+        # Look for product names in the query
+        product_matches = find_products_by_keyword(query, products)
+        
+        if product_matches:
+            # User is asking about colors for specific products
+            if len(product_matches) == 1:
+                # Single product match - give specific response
+                product = product_matches[0]
+                product_colors = get_product_colors(product)
+                if product_colors:
+                    color_list = ', '.join(product_colors)
+                    return f"🎨 **{product.get('title', 'Product')}** available colors: {color_list}"
+                else:
+                    return f"🎨 **{product.get('title', 'Product')}**: Color not available for this product."
+            else:
+                # Multiple products matched - ask user to be more specific
+                product_names = [p.get('title', 'Product') for p in product_matches]
+                product_list = ', '.join(product_names)
+                return f"🤔 I found multiple products: {product_list}\n\nPlease be more specific. For example:\n• 'What colors does the complete snowboard come in?'\n• 'Show me the draft snowboard colors'"
+        
+        # If no specific product found, ask user to be more specific
+        return "🤔 I couldn't find a specific product in your query. Please ask about a specific product like:\n• 'What colors does the complete snowboard come in?'\n• 'Show me snowboard color options'\n• 'What are the colors for the gift card?'"
+    
+    # Specific color queries (e.g., "show me ice color products")
+    elif query_has_colors:
+        matches = find_matching_products(query, products)
+        if matches:
+            return '\n\n'.join([format_product_card(p) for p in matches])
+        else:
+            return "Sorry, I couldn't find any products in that color. Try asking about available colors for specific products."
+    
     # Show all products
     if 'all products' in query_lower or 'show me' in query_lower or 'list' in query_lower or 'products' in query_lower:
         if not products:
             return "No products found."
         return '\n\n'.join([format_product_card(p) for p in products])
+    
     # Price query
     if 'price' in query_lower or 'cost' in query_lower or 'how much' in query_lower:
         matches = find_matching_products(query, products)
@@ -221,6 +367,7 @@ def generate_chatbot_response(query, products, memory=None):
             return '\n\n'.join([format_product_card(p) for p in matches])
         else:
             return "Sorry, I couldn't find any product related to that."
+    
     # Vendor
     if 'vendor' in query_lower or 'brand' in query_lower:
         matches = find_matching_products(query, products)
@@ -228,6 +375,7 @@ def generate_chatbot_response(query, products, memory=None):
             return '\n\n'.join([format_product_card(p) for p in matches])
         else:
             return "Sorry, I couldn't find any product related to that."
+    
     # Tag
     if 'tag' in query_lower:
         matches = find_matching_products(query, products)
@@ -235,13 +383,7 @@ def generate_chatbot_response(query, products, memory=None):
             return '\n\n'.join([format_product_card(p) for p in matches])
         else:
             return "Sorry, I couldn't find any product related to that."
-    # Color (try to find in options)
-    if 'color' in query_lower:
-        matches = find_matching_products(query, products)
-        if matches:
-            return '\n\n'.join([format_product_card(p) for p in matches])
-        else:
-            return "Sorry, I couldn't find any product related to that."
+    
     # Link to buy
     if 'buy' in query_lower or 'link' in query_lower or 'purchase' in query_lower or 'url' in query_lower:
         matches = find_matching_products(query, products)
@@ -249,9 +391,11 @@ def generate_chatbot_response(query, products, memory=None):
             return '\n'.join([f"🔗 {generate_product_link(p)}" for p in matches])
         else:
             return "No matching product found to provide a link."
+    
     # Shipping
     if 'shipping' in query_lower or 'delivery' in query_lower:
         return "🚚 We offer delivery on all products. Specific charges and timeframes may vary."
+    
     # Name/title
     if 'name' in query_lower or 'title' in query_lower:
         matches = find_matching_products(query, products)
@@ -259,11 +403,12 @@ def generate_chatbot_response(query, products, memory=None):
             return '\n\n'.join([format_product_card(p) for p in matches])
         else:
             return "Sorry, I couldn't find any product related to that."
+    
     # Default: show a short summary
     matches = find_matching_products(query, products)
     if matches:
         return '\n\n'.join([format_product_card(p) for p in matches])
-    return "🤖 I'm here to help with product details, pricing, or availability. Try asking something like: 'Show me snowboards' or 'Price of Gift Card'."
+    return "🤖 I'm here to help with product details, pricing, or availability. Try asking something like: 'Show me snowboards' or 'Price of Gift Card' or 'Show me Ice color snowboards' or 'What colors are available?'"
 
 # Helper to format product data for the prompt
 
@@ -338,25 +483,42 @@ def chat():
         # Append new user message
         chat_history.append({'role': 'user', 'message': user_query})
 
-        # Prepare context for Gemini: last 5 messages (user+bot)
-        context_messages = []
-        for msg in chat_history[-10:]:
-            prefix = 'User:' if msg['role'] == 'user' else 'Bot:'
-            context_messages.append(f"{prefix} {msg['message']}")
-        context = format_product_data_for_prompt(products_latest)
-        # Add chat history context to prompt
-        if context_messages:
-            context = f"Chat History:\n{chr(10).join(context_messages)}\n\nProduct Catalog:\n{context}"
+        # Check if this is a color-related query
+        query_lower = user_query.lower()
+        color_keywords = [
+            'black', 'white', 'red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 
+            'brown', 'gray', 'grey', 'silver', 'gold', 'navy', 'maroon', 'olive', 'teal',
+            'cyan', 'magenta', 'lime', 'indigo', 'violet', 'coral', 'salmon', 'turquoise',
+            'beige', 'cream', 'ivory', 'charcoal', 'burgundy', 'emerald', 'sapphire', 'ruby',
+            'amber', 'bronze', 'copper', 'platinum', 'rose', 'lavender', 'mint', 'peach',
+            'ice', 'dawn', 'powder', 'electric', 'sunset', 'hydrogen', 'liquid', 'brew'
+        ]
+        query_has_colors = any(color in query_lower for color in color_keywords)
+        query_mentions_color = any(word in query_lower for word in ['color', 'colour', 'coor', 'colors', 'colours'])
 
-        answer = query_gemini(user_query, context)
+        # Use local color detection for color queries, Gemini for others
+        if query_has_colors or query_mentions_color:
+            answer = generate_chatbot_response(user_query, products_latest)
+        else:
+            # Use Gemini for non-color queries
+            context_messages = []
+            for msg in chat_history[-10:]:
+                prefix = 'User:' if msg['role'] == 'user' else 'Bot:'
+                context_messages.append(f"{prefix} {msg['message']}")
+            context = format_product_data_for_prompt(products_latest)
+            # Add chat history context to prompt
+            if context_messages:
+                context = f"Chat History:\n{chr(10).join(context_messages)}\n\nProduct Catalog:\n{context}"
 
-        # Replace product name with clickable markdown link, and do not show the raw link
-        for product in products_latest:
-            title = product.get('title', '')
-            title_lower = title.lower()
-            link = generate_product_link(product)
-            if title and link and title_lower in answer.lower():
-                answer = re.sub(rf'(?<!\[){re.escape(title)}(?!\])', f'[{title}]({link})', answer)
+            answer = query_gemini(user_query, context)
+
+            # Replace product name with clickable markdown link, and do not show the raw link
+            for product in products_latest:
+                title = product.get('title', '')
+                title_lower = title.lower()
+                link = generate_product_link(product)
+                if title and link and title_lower in answer.lower():
+                    answer = re.sub(rf'(?<!\[){re.escape(title)}(?!\])', f'[{title}]({link})', answer)
 
         # Append bot response to chat history and save
         chat_history.append({'role': 'bot', 'message': answer})
@@ -386,6 +548,7 @@ if __name__ == "__main__":
         app.run(host="0.0.0.0", port=5000)
     else:
         print("Welcome to Starky Shop Chatbot! Type 'quit' to exit.\n")
+        
         while True:
             user_query = input("You: ").strip()
             if user_query.lower() in ['quit', 'exit', 'bye']:
