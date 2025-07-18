@@ -1,0 +1,498 @@
+[
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Welcome to our store! Let me know if you need any help with finding the perfect snowboard or accessory. Happy to help you find what you need! \ud83d\ude0a\n"
+  },
+  {
+    "role": "user",
+    "message": "what is the price of boards"
+  },
+  {
+    "role": "bot",
+    "message": "Absolutely! Here's a list of our snowboards along with their prices:\n\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** by eCommerce Test Store Demo: \u20b92629.95\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** by Snowboard Vendor: \u20b9629.95\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor: \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor: \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor: \u20b91025.00\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** by eCommerce Test Store Demo: \u20b9785.95\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** by Snowboard Vendor: \u20b9699.95\n*   **[The Draft Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-draft-snowboard)** by Snowboard Vendor: \u20b92629.95\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** by Snowboard Vendor: \u20b9749.95\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** by eCommerce Test Store Demo: \u20b9949.95\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** by eCommerce Test Store Demo: \u20b9729.95\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** by Multi-managed Vendor: \u20b9629.95\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n\nWe have boards to fit most budgets. Let me know if any of these catches your eye! \ud83d\ude0a\n"
+  },
+  {
+    "role": "user",
+    "message": "hi"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Welcome back! Do you need help finding a specific snowboard or any other winter gear today? \n"
+  },
+  {
+    "role": "user",
+    "message": "list products"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, here's a list of all the products we currently have in our store:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** by Snowboard Vendor: \u20b910.00\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** by eCommerce Test Store Demo: \u20b924.95\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** by eCommerce Test Store Demo: \u20b92629.95\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** by Snowboard Vendor: \u20b9629.95\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor: \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor: \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor: \u20b91025.00\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** by eCommerce Test Store Demo: \u20b9785.95\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** by Snowboard Vendor: \u20b9699.95\n*   **[The Draft Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-draft-snowboard)** by Snowboard Vendor: \u20b92629.95\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** by Snowboard Vendor: \u20b9749.95\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** by eCommerce Test Store Demo: \u20b9949.95\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** by eCommerce Test Store Demo: \u20b9729.95\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** by Multi-managed Vendor: \u20b9629.95\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n\nIs there anything in particular that you are interested in?\n"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Welcome back to our store! Are you looking for anything in particular today? Maybe a snowboard, some accessories, or a gift card? Let me know how I can help! \ud83d\ude0a\n"
+  },
+  {
+    "role": "user",
+    "message": "give me product list"
+  },
+  {
+    "role": "bot",
+    "message": "Sure, here is a list of all the products we carry:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** by Snowboard Vendor: \u20b910.00\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** by eCommerce Test Store Demo: \u20b924.95\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** by eCommerce Test Store Demo: \u20b92629.95\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** by Snowboard Vendor: \u20b9629.95\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor: \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor: \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor: \u20b91025.00\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** by eCommerce Test Store Demo: \u20b9785.95\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** by Snowboard Vendor: \u20b9699.95\n*   **[The Draft Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-draft-snowboard)** by Snowboard Vendor: \u20b92629.95\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** by Snowboard Vendor: \u20b9749.95\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** by eCommerce Test Store Demo: \u20b9949.95\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** by eCommerce Test Store Demo: \u20b9729.95\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** by Multi-managed Vendor: \u20b9629.95\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n\nIs there anything in particular you're interested in? Let me know!\n"
+  },
+  {
+    "role": "user",
+    "message": "i have budget of 500-1000 can you suggest me a product"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, with a budget of \u20b9500-\u20b91000, here are some snowboards that would fit nicely:\n\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** by Snowboard Vendor: \u20b9629.95\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor: \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor: \u20b9749.95\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** by eCommerce Test Store Demo: \u20b9785.95\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** by Snowboard Vendor: \u20b9699.95\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** by Snowboard Vendor: \u20b9749.95\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** by eCommerce Test Store Demo: \u20b9949.95\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** by eCommerce Test Store Demo: \u20b9729.95\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** by Multi-managed Vendor: \u20b9629.95\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n\nThese are all great options! Do any of them particularly catch your eye, or would you like me to narrow it down based on any other preferences (like vendor or specific features)?\n"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Are you looking for a product suggestion or do you have any specific questions I can help you with today?\n"
+  },
+  {
+    "role": "user",
+    "message": "can you give me dawn color product?"
+  },
+  {
+    "role": "bot",
+    "message": "I do not have any products that are specifically listed as \"dawn\" colored. Is there any other color you would like?\n"
+  },
+  {
+    "role": "user",
+    "message": "what are the color options for snowboard"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there!\n\nI do not have the color options for the snowboards listed in the product description.\n"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Do you have any questions about the snowboards or other products? I'm here to help!\n"
+  },
+  {
+    "role": "user",
+    "message": "give me products available?"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, here's a list of the products we have available in the store right now:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** by Snowboard Vendor: \u20b910.00\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** by eCommerce Test Store Demo: \u20b924.95\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** by eCommerce Test Store Demo: \u20b92629.95\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** by Snowboard Vendor: \u20b9629.95\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor: \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor: \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor: \u20b91025.00\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** by eCommerce Test Store Demo: \u20b9785.95\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** by Snowboard Vendor: \u20b9699.95\n*   **[The Draft Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-draft-snowboard)** by Snowboard Vendor: \u20b92629.95\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** by Snowboard Vendor: \u20b9749.95\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** by eCommerce Test Store Demo: \u20b9949.95\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** by eCommerce Test Store Demo: \u20b9729.95\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** by Multi-managed Vendor: \u20b9629.95\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** by eCommerce Test Store Demo: \u20b9885.95\n\nIs there anything in particular that you are interested in?\n"
+  },
+  {
+    "role": "user",
+    "message": "what colour options available in the snowboard"
+  },
+  {
+    "role": "bot",
+    "message": "I do not have the color options for the snowboards listed in the product description.\n"
+  },
+  {
+    "role": "user",
+    "message": "do you have dawn?"
+  },
+  {
+    "role": "bot",
+    "message": "I do not have any products that are specifically listed as \"dawn\" colored. Is there any other color you would like?\n"
+  },
+  {
+    "role": "user",
+    "message": "yes i want ice color snowboard"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, I do not have any snowboards specifically listed as \"ice\" colored, but here are the snowboards that we currently have that may be similar to the color you're looking for:\n\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor for \u20b91025.00\n"
+  },
+  {
+    "role": "user",
+    "message": "ice"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, I do not have any snowboards specifically listed as \"ice\" colored. Here are the snowboards that may be similar to the color you're looking for:\n\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor for \u20b91025.00"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Is there anything I can help you with today? Perhaps you're looking for a specific snowboard or accessory? I can check our inventory for you!\n"
+  },
+  {
+    "role": "user",
+    "message": "give me colour of some products?"
+  },
+  {
+    "role": "bot",
+    "message": "I do not have the color options listed in the product descriptions.\n"
+  },
+  {
+    "role": "user",
+    "message": "is there any dawn color?"
+  },
+  {
+    "role": "bot",
+    "message": "I do not have any products that are specifically listed as \"dawn\" colored. Is there any other color you would like?\n"
+  },
+  {
+    "role": "user",
+    "message": "ice?"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, I don't have any snowboards specifically listed as \"ice\" colored, but here are some options that may be similar:\n\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor for \u20b91025.00"
+  },
+  {
+    "role": "user",
+    "message": "The Complete Snowboard color"
+  },
+  {
+    "role": "bot",
+    "message": "I don't have the color options for \"[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)\". However, it's a **PREMIUM** *snowboard* and costs \u20b9699.95 from Snowboard Vendor.\n"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Do you need help finding a specific product today?\n"
+  },
+  {
+    "role": "user",
+    "message": "what are the color options available in the complete snowboards?"
+  },
+  {
+    "role": "bot",
+    "message": "I don't have the color options for \"[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)\". However, it's a **PREMIUM** *snowboard* and costs \u20b9699.95 from Snowboard Vendor.\n"
+  },
+  {
+    "role": "user",
+    "message": "is there any ice color snowboard?"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, I don't have any snowboards specifically listed as \"ice\" colored, but here are some options that may be similar:\n\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor for \u20b91025.00\n"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! How can I help you today? Looking for any snowboard in particular?\n"
+  },
+  {
+    "role": "user",
+    "message": "give me color options available?"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, I do not have specific color options. But here are some snowboards and vendors that might have the color you're looking for:\n\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor for \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor for \u20b91025.00\n\n"
+  },
+  {
+    "role": "user",
+    "message": "ok give me colours available"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, I do not have specific color options. But here are some snowboards and vendors that might have the color you're looking for:\n\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor for \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor for \u20b91025.00\n"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Let me know if you are looking for a snowboard. I'm happy to help!\n"
+  },
+  {
+    "role": "user",
+    "message": "What colors are available?"
+  },
+  {
+    "role": "bot",
+    "message": "While I don't have specific color options listed for each snowboard, here are some snowboards whose names might give you an idea of their color or style:\n\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor for \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor for \u20b91025.00\n\nYou can check out the product pages for more details and see if they match the colors you're looking for!\n"
+  },
+  {
+    "role": "user",
+    "message": "hiii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Are you looking for a snowboard today? I'm here to help you find the perfect one! \n"
+  },
+  {
+    "role": "user",
+    "message": "give me colour options in snowboard?"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 Available colors in our store: $10, $100, $25, $50, Dawn, Electric, Ice, Powder, Sample Selling Plans Ski Wax, Selling Plans Ski Wax, Special Selling Plans Ski Wax, Sunset"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hey there! Looking for a snowboard today? I'm happy to help you find the perfect one!\n"
+  },
+  {
+    "role": "user",
+    "message": "give me available colour options"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 Available colors in our store: Dawn, Electric, Ice, Powder, Sunset"
+  },
+  {
+    "role": "user",
+    "message": "for which product it is?"
+  },
+  {
+    "role": "bot",
+    "message": "The colors \"Dawn\", \"Electric\", \"Ice\", \"Powder\", and \"Sunset\" don't seem to be directly associated with a specific snowboard in our current inventory. They might refer to general design themes or color schemes across different snowboards or accessories.\n\nFor example, we have:\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** by Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** by Hydrogen Vendor for \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** by Hydrogen Vendor for \u20b91025.00\n\nI recommend checking the product descriptions and images on our store to get a better sense of the color options for each snowboard.\n"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Are you looking for a snowboard today? I'm here to help you find the perfect one!\n"
+  },
+  {
+    "role": "user",
+    "message": "can you give me colour option for a specific snowboard?"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 Available colors in our store: $10, $100, $25, $50, Dawn, Electric, Ice, Powder, Sample Selling Plans Ski Wax, Selling Plans Ski Wax, Special Selling Plans Ski Wax, Sunset"
+  },
+  {
+    "role": "user",
+    "message": "hiii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! Are you looking for a snowboard today? I'm here to help you find the perfect one!\n"
+  },
+  {
+    "role": "user",
+    "message": "can you give me any colour available ?"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 Available colors in our store: Dawn, Electric, Ice, Powder, Sample Selling Plans Ski Wax, Selling Plans Ski Wax, Special Selling Plans Ski Wax, Sunset"
+  },
+  {
+    "role": "user",
+    "message": "the complete snowboard color options"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 Available colors in our store: Dawn, Electric, Ice, Powder, Sample Selling Plans Ski Wax, Selling Plans Ski Wax, Special Selling Plans Ski Wax, Sunset"
+  },
+  {
+    "role": "user",
+    "message": "The Complete Snowboard"
+  },
+  {
+    "role": "bot",
+    "message": "Alright! [The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard) from Snowboard Vendor is priced at \u20b9699.95. As for the available colors, I do not have any color options listed in the product details.\n"
+  },
+  {
+    "role": "user",
+    "message": "give me colours avauilable for The Complete Snowboard"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **Gift Card**: No colors available for this product.\n\n\ud83c\udfa8 **The 3p Fulfilled Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Archived Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Hydrogen**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Liquid**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Oxygen**: No colors available for this product.\n\n\ud83c\udfa8 **The Compare at Price Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Complete Snowboard** available colors: Powder, Sunset, Ice, Dawn, Electric\n\n\ud83c\udfa8 **The Draft Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Hidden Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Inventory Not Tracked Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Minimal Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Multi-location Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Multi-managed Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Out of Stock Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Videographer Snowboard**: No colors available for this product."
+  },
+  {
+    "role": "user",
+    "message": "hiii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! \ud83d\udc4b Ready to shred some powder? Do you have any questions about our snowboards or accessories?\n"
+  },
+  {
+    "role": "user",
+    "message": "the complete snowboard product"
+  },
+  {
+    "role": "bot",
+    "message": "Sure thing! \"[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)\" from Snowboard Vendor is priced at \u20b9699.95. This **PREMIUM** *snowboard* is so **SUPER** *DUPER* awesome! It's tagged as Premium, Snow, Snowboard, Sport, and Winter.\n\ud83c\udfa8 It's available in Powder, Sunset, Ice, Dawn, and Electric colors.\n"
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! \ud83d\udc4b How can I help you find the perfect gear for your next adventure?\n"
+  },
+  {
+    "role": "user",
+    "message": "give me list of products available at your store"
+  },
+  {
+    "role": "bot",
+    "message": "Alright, here's a list of all the awesome products we have in our store right now:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor - \u20b910.00\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** from eCommerce Test Store Demo - \u20b924.95 (Tagged as Accessory, Sport, Winter)\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** from eCommerce Test Store Demo - \u20b92629.95 (Tagged as Accessory, Sport, Winter)\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** from Snowboard Vendor - \u20b9629.95 (Tagged as Archived, Premium, Snow, Snowboard, Sport, Winter)\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** from Hydrogen Vendor - \u20b9600.00 (Tagged as Accessory, Sport, Winter)\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** from Hydrogen Vendor - \u20b9749.95 (Tagged as Accessory, Sport, Winter)\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** from Hydrogen Vendor - \u20b91025.00 (Tagged as Accessory, Sport, Winter)\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** from eCommerce Test Store Demo - \u20b9785.95 (Tagged as Accessory, Sport, Winter)\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** from Snowboard Vendor - \u20b9699.95 (Tagged as Premium, Snow, Snowboard, Sport, Winter)\n*   **[The Draft Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-draft-snowboard)** from Snowboard Vendor - \u20b92629.95\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** from Snowboard Vendor - \u20b9749.95 (Tagged as Premium, Snow, Snowboard, Sport, Winter)\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** from eCommerce Test Store Demo - \u20b9949.95 (Tagged as Accessory, Sport, Winter)\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** from eCommerce Test Store Demo - \u20b9885.95\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** from eCommerce Test Store Demo - \u20b9729.95 (Tagged as Premium, Snow, Snowboard, Sport, Winter)\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** from Multi-managed Vendor - \u20b9629.95 (Tagged as Premium, Snow, Snowboard, Sport, Winter)\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** from eCommerce Test Store Demo - \u20b9885.95 (Tagged as Accessory, Sport, Winter)\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** from eCommerce Test Store Demo - \u20b9885.95\n\nHope you find something you like! Let me know if you have any more questions.\n"
+  },
+  {
+    "role": "user",
+    "message": "can you give me one product which is below 500"
+  },
+  {
+    "role": "bot",
+    "message": "Of course!\n\nHere's a product that is below \u20b9500:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor - \u20b910.00\n\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** from eCommerce Test Store Demo - \u20b924.95 (Tagged as Accessory, Sport, Winter)\n"
+  },
+  {
+    "role": "user",
+    "message": "can you give me one colour for one product?"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **Gift Card**: No colors available for this product."
+  },
+  {
+    "role": "user",
+    "message": "for snowboard what colours are available ?"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **The 3p Fulfilled Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Archived Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Hydrogen**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Liquid**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Oxygen**: No colors available for this product.\n\n\ud83c\udfa8 **The Compare at Price Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Complete Snowboard** available colors: Sunset, Electric, Dawn, Powder, Ice\n\n\ud83c\udfa8 **The Draft Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Hidden Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Inventory Not Tracked Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Minimal Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Multi-location Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Multi-managed Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Out of Stock Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Videographer Snowboard**: No colors available for this product."
+  },
+  {
+    "role": "user",
+    "message": "The Draft snowboard avaialble colours"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **The 3p Fulfilled Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Archived Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Hydrogen**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Liquid**: No colors available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Oxygen**: No colors available for this product.\n\n\ud83c\udfa8 **The Compare at Price Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Complete Snowboard** available colors: Sunset, Electric, Dawn, Powder, Ice\n\n\ud83c\udfa8 **The Draft Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Hidden Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Inventory Not Tracked Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Minimal Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Multi-location Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Multi-managed Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Out of Stock Snowboard**: No colors available for this product.\n\n\ud83c\udfa8 **The Videographer Snowboard**: No colors available for this product."
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hello there! How can I help you today?\n"
+  },
+  {
+    "role": "user",
+    "message": "What colors does the gift card come in?"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **Gift Card**: Color not available for this product.\n\n\ud83c\udfa8 **The 3p Fulfilled Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Archived Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Hydrogen**: Color not available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Liquid**: Color not available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Oxygen**: Color not available for this product.\n\n\ud83c\udfa8 **The Compare at Price Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Complete Snowboard** available colors: Sunset, Powder, Electric, Ice, Dawn\n\n\ud83c\udfa8 **The Draft Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Hidden Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Inventory Not Tracked Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Minimal Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Multi-location Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Multi-managed Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Out of Stock Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Videographer Snowboard**: Color not available for this product."
+  },
+  {
+    "role": "user",
+    "message": "What are tWhat are the colors for the draft snowboard?he colors for the draft snowboard?\""
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **The 3p Fulfilled Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Archived Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Hydrogen**: Color not available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Liquid**: Color not available for this product.\n\n\ud83c\udfa8 **The Collection Snowboard: Oxygen**: Color not available for this product.\n\n\ud83c\udfa8 **The Compare at Price Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Complete Snowboard** available colors: Sunset, Powder, Electric, Ice, Dawn\n\n\ud83c\udfa8 **The Draft Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Hidden Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Inventory Not Tracked Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Minimal Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Multi-location Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Multi-managed Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Out of Stock Snowboard**: Color not available for this product.\n\n\ud83c\udfa8 **The Videographer Snowboard**: Color not available for this product."
+  },
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hello! How can I help you today?\n"
+  },
+  {
+    "role": "user",
+    "message": "snowboard colors"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83e\udd14 I found multiple products: The 3p Fulfilled Snowboard, The Archived Snowboard, The Collection Snowboard: Hydrogen, The Collection Snowboard: Liquid, The Collection Snowboard: Oxygen, The Compare at Price Snowboard, The Complete Snowboard, The Draft Snowboard, The Hidden Snowboard, The Inventory Not Tracked Snowboard, The Minimal Snowboard, The Multi-location Snowboard, The Multi-managed Snowboard, The Out of Stock Snowboard, The Videographer Snowboard\n\nPlease be more specific. For example:\n\u2022 'What colors does the complete snowboard come in?'\n\u2022 'Show me the draft snowboard colors'"
+  },
+  {
+    "role": "user",
+    "message": "the complete snowboard clours?"
+  },
+  {
+    "role": "bot",
+    "message": "[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard) from Snowboard Vendor comes in Sunset, Powder, Electric, Ice, and Dawn! It's priced at \u20b9699.95 and is tagged as Premium, Snow, Snowboard, Sport, and Winter.\n"
+  },
+  {
+    "role": "user",
+    "message": "list of the products"
+  },
+  {
+    "role": "bot",
+    "message": "Here's a list of the products we have:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor for \u20b910.00\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** from eCommerce Test Store Demo for \u20b924.95\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** from eCommerce Test Store Demo for \u20b92629.95\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** from Snowboard Vendor for \u20b9629.95\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** from Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** from Hydrogen Vendor for \u20b9749.95\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** from Hydrogen Vendor for \u20b91025.00\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** from eCommerce Test Store Demo for \u20b9785.95\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** from Snowboard Vendor for \u20b9699.95\n*   **[The Draft Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-draft-snowboard)** from Snowboard Vendor for \u20b92629.95\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** from Snowboard Vendor for \u20b9749.95\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** from eCommerce Test Store Demo for \u20b9949.95\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** from eCommerce Test Store Demo for \u20b9885.95\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** from eCommerce Test Store Demo for \u20b9729.95\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** from Multi-managed Vendor for \u20b9629.95\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** from eCommerce Test Store Demo for \u20b9885.95\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** from eCommerce Test Store Demo for \u20b9885.95\n"
+  },
+  {
+    "role": "user",
+    "message": "the price of the videographer snowboard"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83d\udecd\ufe0f **The Complete Snowboard**\n\ud83d\udcb0 Price: \u20b9699.95\n\ud83d\udcc4 This <b>PREMIUM</b> <i>snowboard</i> is so <b>SUPER</b><i>DUPER</i> awesome!\n\ud83c\udff7\ufe0f Tags: Premium, Snow, Snowboard, Sport, Winter\n\ud83c\udfa8 Available colors: Powder, Electric, Ice, Sunset, Dawn\n\ud83c\udfe2 Vendor: Snowboard Vendor\n\ud83d\udd17 [View Product](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)"
+  },
+  {
+    "role": "user",
+    "message": "What colors are available?"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **The Compare at Price Snowboard**: Color not available for this product."
+  },
+  {
+    "role": "user",
+    "message": "What colors does the complete snowboard come in?'"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **The Complete Snowboard** available colors: Powder, Electric, Ice, Sunset, Dawn"
+  },
+  {
+    "role": "user",
+    "message": "'What are the colors for the gift card?'"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83c\udfa8 **Gift Card**: Color not available for this product."
+  },
+  {
+    "role": "user",
+    "message": "give me some products below 500"
+  },
+  {
+    "role": "bot",
+    "message": "Absolutely! Here are the products we have for under \u20b9500:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor for \u20b910.00\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** from eCommerce Test Store Demo for \u20b924.95"
+  },
+  {
+    "role": "user",
+    "message": "give me products 500-1000"
+  },
+  {
+    "role": "bot",
+    "message": "Alright! Here are the products priced between \u20b9500 and \u20b91000:\n\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** from Snowboard Vendor for \u20b9629.95\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** from Hydrogen Vendor for \u20b9600.00\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** from Hydrogen Vendor for \u20b9749.95\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** from eCommerce Test Store Demo for \u20b9785.95\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** from Snowboard Vendor for \u20b9699.95\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** from Snowboard Vendor for \u20b9749.95\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** from eCommerce Test Store Demo for \u20b9949.95\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** from eCommerce Test Store Demo for \u20b9885.95\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** from eCommerce Test Store Demo for \u20b9729.95\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** from Multi-managed Vendor for \u20b9629.95\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** from eCommerce Test Store Demo for \u20b9885.95\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** from eCommerce Test Store Demo for \u20b9885.95"
+  }
+]
