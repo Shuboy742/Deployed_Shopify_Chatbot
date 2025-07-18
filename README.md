@@ -70,15 +70,16 @@ SHOP_NAME=your_shop_name
 ##  Project Structure
 
 ```
-Shopify_chatbot/
-├── config.py                 # Configuration and API keys
+Shopify_Chatbot/
+├── config.py                 # Configuration and API keys (not tracked)
+├── config_template.py        # Template for configuration
 ├── requirements.txt          # Python dependencies
 ├── README.md                # This file
-├── data/
-│   ├── scraper.py           # Shopify API data fetcher
-│   ├── app.py              # Main chatbot application
-│   └── shopify_products.json # Cached product data
-└── venv/                    # Virtual environment
+├── .gitignore               # Git ignore rules
+└── data/
+    ├── app.py               # Main chatbot application
+    ├── products.json        # Cached product data (not tracked)
+    └── chat_histories/      # User chat histories (not tracked)
 ```
 
 ##  Usage
