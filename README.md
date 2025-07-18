@@ -264,17 +264,11 @@ https://your-ngrok-link/webhook/products
 
 
 **Results**
-![Screenshot from 2025-07-09 15-11-50](https://github.com/user-attachments/assets/72f43358-29fe-4637-94df-d584cd52daae)
 
-![Screenshot from 2025-07-09 15-12-47](https://github.com/user-attachments/assets/c1886954-30d6-4262-999d-9962eb0dba3e)
+<img width="1291" height="697" alt="r1" src="https://github.com/user-attachments/assets/8c3aa936-e104-4c46-840b-3ab36b482b50" />
 
-![cb](https://github.com/user-attachments/assets/2c647789-3cd4-4cea-be8e-39a3ad8a4af1)
+<img width="1294" height="700" alt="r2" src="https://github.com/user-attachments/assets/f15de476-2d15-46a1-bae5-857862deadf4" />
 
-<img width="1291" height="670" alt="cb" src="https://github.com/user-attachments/assets/8915b323-121f-4674-a23c-78bd4cea0faf" />
+<img width="1291" height="699" alt="r3" src="https://github.com/user-attachments/assets/8d9425cd-74c2-4219-879d-8ee35e34e57f" />
 
-<img width="1293" height="625" alt="cb1" src="https://github.com/user-attachments/assets/e7b2170f-9697-4968-9842-f75fb76ddfa3" />
-
-
-
-
-
+<img width="1289" height="699" alt="r4" src="https://github.com/user-attachments/assets/36f7d8a4-0e35-4c04-a6b0-b783803f1d60" />
