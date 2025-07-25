@@ -1,158 +1,169 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Chatbot Widget</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+<!-- Chatbot Widget Start -->
+<style>
+  #chatbot-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background: #007bff;
+    color: white;
+    font-size: 28px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 9999;
+  }
 
-    #chatbot-button {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 28px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      z-index: 1001;
-    }
+  #chatbox {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 340px;
+    height: 480px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 9998;
+    animation: slideUp 0.3s ease-out;
+  }
 
-    #chatbot-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
     }
-
-    #chatbox {
-      position: fixed;
-      bottom: 100px;
-      right: 30px;
-      width: 320px;
-      height: 440px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      z-index: 1000;
-      animation: slideUp 0.4s ease-out;
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
+  }
 
-    #chatbox.hidden {
-      display: none;
-    }
+  #close-button {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    color: #000;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+  }
 
-    #close-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: none;
-      color: #333;
-      border: none;
-      font-size: 18px;
-      cursor: pointer;
-      z-index: 2;
-    }
+  #messages {
+    flex: 1;
+    padding: 40px 16px 16px 16px;
+    overflow-y: auto;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+  }
 
-    #close-button:hover {
-      color: #007bff;
-    }
+  .user-message, .bot-message {
+    max-width: 80%;
+    margin: 8px 0;
+    padding: 10px 14px;
+    border-radius: 16px;
+    word-wrap: break-word;
+    line-height: 1.4;
+  }
 
-    @keyframes slideUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
+  .user-message {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+  }
 
-    #messages {
-      flex: 1;
-      overflow-y: auto;
-      padding: 20px 16px 0 16px;
-      color: #333;
-    }
+  .bot-message {
+    background: #f1f1f1;
+    color: #333;
+    align-self: flex-start;
+  }
 
-    .user-message {
-      background-color: #007bff;
-      color: white;
-      border-radius: 12px;
-      padding: 8px 12px;
-      margin: 10px 0;
-      max-width: 80%;
-      align-self: flex-start;
-      word-break: break-word;
-    }
+  #input-row {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    background: #fff;
+  }
 
-    .bot-message {
-      background-color: #f1f1f1;
-      color: #333;
-      border-radius: 12px;
-      padding: 8px 12px;
-      margin: 10px 0;
-      max-width: 80%;
-      align-self: flex-end;
-      word-break: break-word;
-    }
+  #user-input {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #f9f9f9;
+    outline: none;
+    font-size: 14px;
+  }
 
-    #input-row {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      padding: 16px;
-      border-top: 1px solid #eee;
-      background: #fff;
-    }
+  #user-input:focus {
+    border-color: #007bff;
+  }
 
-    #user-input {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      outline: none;
-      color: #333;
-      background-color: #f9f9f9;
-    }
+  #input-row button {
+    margin-top: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+  }
 
-    #user-input:focus {
-      border-color: #007bff;
-    }
+  #input-row button:hover {
+    background-color: #0056b3;
+  }
 
-    #input-row button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 24px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+  /* New Section for product suggestions/questions */
+  #suggestions {
+    display: flex;
+    overflow-x: auto;
+    margin: 12px 0;
+    padding: 0 12px;
+  }
 
-    #input-row button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
+  .suggestion-item {
+    background: #f1f1f1;
+    color: #000000;
+    padding: 10px 16px;
+    margin-right: 8px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
 
-<!-- Chatbot Widget -->
+  .suggestion-item:hover {
+    background-color: #007bff;
+    color: white;
+  }
+</style>
+
+<!-- Widget HTML -->
 <div id="chatbot-widget">
   <button id="chatbot-button" onclick="openChatbot()">💬</button>
-  <div id="chatbox" class="hidden">
+  <div id="chatbox">
     <button id="close-button" onclick="closeChatbot()">✖</button>
     <div id="messages"></div>
+
+    <!-- New Suggestions Section -->
+    <div id="suggestions">
+      <div class="suggestion-item" onclick="sendSuggestedMessage('What are the latest products?')">What are the latest products?</div>
+      <div class="suggestion-item" onclick="sendSuggestedMessage('Tell me about your product range.')">Tell me about your product range.</div>
+      <div class="suggestion-item" onclick="sendSuggestedMessage('Show me discounts and offers.')">Show me discounts and offers.</div>
+      <div class="suggestion-item" onclick="sendSuggestedMessage('Which products are best-sellers?')">Which products are best-sellers?</div>
+      <div class="suggestion-item" onclick="sendSuggestedMessage('Can you recommend a product?')">Can you recommend a product?</div>
+    </div>
+
     <div id="input-row">
       <input type="text" id="user-input" placeholder="Type your message..." />
       <button onclick="sendMessage()">Send</button>
@@ -160,58 +171,73 @@
   </div>
 </div>
 
+<!-- Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Chatbot JS -->
 <script>
   function openChatbot() {
-    document.getElementById("chatbox").classList.remove("hidden");
+    document.getElementById("chatbox").style.display = "flex";
   }
 
   function closeChatbot() {
-    document.getElementById("chatbox").classList.add("hidden");
+    document.getElementById("chatbox").style.display = "none";
   }
 
   async function sendMessage() {
     const userInputElem = document.getElementById("user-input");
-    const userInput = userInputElem.value;
-    if (userInput.trim() === "") return;
+    const userInput = userInputElem.value.trim();
+    if (!userInput) return;
 
-    // Append user message
+    // User message
     const userMessageDiv = document.createElement("div");
     userMessageDiv.className = "user-message";
-    userMessageDiv.innerText = userInput;
+    userMessageDiv.textContent = userInput;
     document.getElementById("messages").appendChild(userMessageDiv);
 
     userInputElem.value = "";
 
-    // API call
-    const response = await fetch("https://9e9bf0dab651.ngrok-free.app/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ message: userInput }),
-    });
+    try {
+      const response = await fetch("https://14e2413305c1.ngrok-free.app/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: userInput })
+      });
 
-    const data = await response.json();
-    const chatbotMessage = data.response;
+      const data = await response.json();
+      const botMessage = data.response || "⚠️ No response";
 
-    // Append bot response
-    const botMessageDiv = document.createElement("div");
-    botMessageDiv.className = "bot-message";
-    botMessageDiv.innerHTML = marked.parse(chatbotMessage);
-    document.getElementById("messages").appendChild(botMessageDiv);
+      const botMessageDiv = document.createElement("div");
+      botMessageDiv.className = "bot-message";
+      botMessageDiv.innerHTML = marked.parse(botMessage);
+      document.getElementById("messages").appendChild(botMessageDiv);
+    } catch (error) {
+      const errorDiv = document.createElement("div");
+      errorDiv.className = "bot-message";
+      errorDiv.textContent = "⚠️ Failed to connect to chatbot.";
+      document.getElementById("messages").appendChild(errorDiv);
+    }
 
     // Scroll to bottom
-    const messagesDiv = document.getElementById("messages");
-    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    const messages = document.getElementById("messages");
+    messages.scrollTop = messages.scrollHeight;
   }
 
-  document.getElementById("user-input").addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
+  // Handle Enter key
+  document.getElementById("user-input").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
       sendMessage();
     }
   });
-</script>
 
-</body>
-</html>
+  // Function to send the clicked suggestion
+  function sendSuggestedMessage(suggestion) {
+    const userInputElem = document.getElementById("user-input");
+    userInputElem.value = suggestion;
+    sendMessage();
+  }
+</script>
+<!-- Chatbot Widget End -->
