@@ -184,4 +184,4 @@ MIT
 
 
 
-Designed by Shubham kambale
+Designed by Shubham Kambale
