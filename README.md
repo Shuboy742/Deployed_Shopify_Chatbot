@@ -167,6 +167,21 @@ MIT
 
 ---
 
+## Results
+<img width="1920" height="969" alt="Screenshot (79)" src="https://github.com/user-attachments/assets/90f53b84-4339-4868-bed6-e69df79aa7ab" />
+
+<img width="1920" height="968" alt="Screenshot (80)" src="https://github.com/user-attachments/assets/f23ee428-3a85-4e1d-9b46-830563b87ee1" />
+
+<img width="1920" height="980" alt="Screenshot (81)" src="https://github.com/user-attachments/assets/5590b143-6cf4-404c-8329-2179fd4f2d62" />
+
+<img width="1920" height="973" alt="Screenshot (82)" src="https://github.com/user-attachments/assets/90422440-47b9-4f5e-8c73-2c76ccc76cb4" />
+
+<img width="1920" height="966" alt="Screenshot (83)" src="https://github.com/user-attachments/assets/5c6f7710-752c-4f83-b423-ea5cadd0d107" />
+
+<img width="1920" height="966" alt="Screenshot (84)" src="https://github.com/user-attachments/assets/4e564b26-39dc-4df6-a915-2330dd0571be" />
+
+<img width="1920" height="976" alt="Screenshot (85)" src="https://github.com/user-attachments/assets/06cf18c6-173f-4166-bbed-9ce64864669e" />
+
 
 
 Designed by Shubham kambale
