@@ -95,6 +95,10 @@ ngrok.exe http 5000
 ```sh
 ngrok http 5000
 ```
+#### **Windows:**
+```sh
+.\ngrok.exe http 5000
+```
 
 - Copy the HTTPS forwarding URL (e.g., `https://abcd1234.ngrok-free.app`).
 
