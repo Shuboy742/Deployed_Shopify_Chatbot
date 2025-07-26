@@ -77,7 +77,7 @@ SHOP_NAME=your_shop_name
 ### 5. Run the Flask Backend
 
 ```sh
-python app.py
+python app.py api
 ```
 - The app will run on `http://localhost:5000`
 
