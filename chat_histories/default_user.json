@@ -1,0 +1,138 @@
+[
+  {
+    "role": "user",
+    "message": "hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hi there! How can I help you today? Are you looking for a specific snowboard or accessory? Let me know what you have in mind! \n"
+  },
+  {
+    "role": "user",
+    "message": "What are the latest products?"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, here are some of the latest products we have in store:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor at just \u20b910.00 - The perfect present!\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** from eCommerce Test Store Demo for \u20b924.95 - Keep your snowboard in top condition!\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** from eCommerce Test Store Demo at \u20b92629.95 - Hit the slopes in style!\n\nHope you find something you like! Let me know if anything catches your eye!\n"
+  },
+  {
+    "role": "user",
+    "message": "What are the latest products?"
+  },
+  {
+    "role": "bot",
+    "message": "Looks like you're interested in our newest gear! Here's a quick rundown of some of the latest additions:\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor at \u20b910.00 - A super versatile gift for any snowboard enthusiast!\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** from eCommerce Test Store Demo for \u20b924.95 - To keep your board gliding smoothly.\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** from eCommerce Test Store Demo at \u20b92629.95 - A fantastic snowboard to shred on!\n\nThese items are all available now. Happy shopping!\n"
+  },
+  {
+    "role": "user",
+    "message": "Tell me about your product range."
+  },
+  {
+    "role": "bot",
+    "message": "We've got a fantastic range of snowboarding gear and accessories here! Let's break it down:\n\n*   **Snowboards:** We have a wide selection from various vendors like \"eCommerce Test Store Demo,\" \"Snowboard Vendor,\" \"Hydrogen Vendor,\" and \"Multi-managed Vendor.\" Models include \"[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)\" (\u20b92629.95), several from the \"The Collection Snowboard\" series like \"Hydrogen\" (\u20b9600.00), \"Liquid\" (\u20b9749.95), and \"Oxygen\" (\u20b91025.00). Plus, we have premium options like \"[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)\" (\u20b9699.95) and specialized boards like \"[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)\" (\u20b9629.95).\n\n*   **Accessories:** To keep your board in top shape, we offer \"[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)\" from \"eCommerce Test Store Demo\" for \u20b924.95.\n\n*   **Gifts:** And if you're looking for a versatile gift, we have \"[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)s\" from \"Snowboard Vendor\" starting at just \u20b910.00!\n\nWe've got something for every snowboarder, from beginners to pros! Let me know if you'd like more details on any specific product!\n"
+  },
+  {
+    "role": "user",
+    "message": "what are the color options available on your store"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83e\udd14 I found multiple products: The 3p Fulfilled Snowboard, The Archived Snowboard, The Collection Snowboard: Hydrogen, The Collection Snowboard: Liquid, The Collection Snowboard: Oxygen, The Compare at Price Snowboard, The Complete Snowboard, The Draft Snowboard, The Hidden Snowboard, The Inventory Not Tracked Snowboard, The Minimal Snowboard, The Multi-location Snowboard, The Multi-managed Snowboard, The Out of Stock Snowboard, The Videographer Snowboard\n\nPlease be more specific. For example:\n\u2022 'What colors does the complete snowboard come in?'\n\u2022 'Show me the draft snowboard colors'"
+  },
+  {
+    "role": "user",
+    "message": "dawn snowboard"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83d\udecd\ufe0f **The Complete Snowboard**\n\ud83d\udcb0 Price: \u20b9699.95\n\ud83d\udcc4 This <b>PREMIUM</b> <i>snowboard</i> is so <b>SUPER</b><i>DUPER</i> awesome!\n\ud83c\udff7\ufe0f Tags: Premium, Snow, Snowboard, Sport, Winter\n\ud83c\udfa8 Available colors: Powder, Sunset, Electric, Ice, Dawn\n\ud83c\udfe2 Vendor: Snowboard Vendor\n\ud83d\udd17 [View Product](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)"
+  },
+  {
+    "role": "user",
+    "message": "Show me discounts and offers."
+  },
+  {
+    "role": "bot",
+    "message": "Alright! Let's see what kind of deals we have for you! I found one discount available on the store.\n\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** is on sale for \u20b9785.95 from eCommerce Test Store Demo.\n"
+  },
+  {
+    "role": "user",
+    "message": "Which products are best-sellers?"
+  },
+  {
+    "role": "bot",
+    "message": "While I don't have specific \"best-seller\" data, I can tell you which products are popular based on similar criteria:\n\n*   **If you're looking for versatility,** the **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor at \u20b910.00 is a great choice!\n*   **For snowboarding,** the **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** from eCommerce Test Store Demo at \u20b92629.95 is a solid pick.\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** from Snowboard Vendor at \u20b9699.95 is labelled a PREMIUM snowboard!\n"
+  },
+  {
+    "role": "user",
+    "message": "JB Snowstorm X1 \u2013 All-Mountain Freestyle Snowboard"
+  },
+  {
+    "role": "bot",
+    "message": "Alright! Here's what I found for the **[JB Snowstorm X1 \u2013 All-Mountain Freestyle Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/jb-snowstorm-x1-all-mountain-freestyle-snowboard)**:\n\n*   It's listed at \u20b924900.00.\n*   It's sold by eCommerce Test Store Demo.\n*   It's designed for All-Mountain / Freestyle.\n"
+  },
+  {
+    "role": "user",
+    "message": "hello"
+  },
+  {
+    "role": "bot",
+    "message": "Hello there! \ud83d\udc4b How can I help you today? Are you looking for a specific snowboard or accessory, or do you have a general question about our products? Let me know! \ud83d\ude0a\n"
+  },
+  {
+    "role": "user",
+    "message": "i want to know status about my order"
+  },
+  {
+    "role": "bot",
+    "message": "I don't have access to your order information or status. To check the status of your order, please visit the store's website and log in to your account, or check your email for shipping updates.\n"
+  },
+  {
+    "role": "user",
+    "message": "What are the latest products?"
+  },
+  {
+    "role": "bot",
+    "message": "Okay, here's a rundown of some of the latest products we have in store:\n\n*   **[JB Snowstorm X1 \u2013 All-Mountain Freestyle Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/jb-snowstorm-x1-all-mountain-freestyle-snowboard)** from eCommerce Test Store Demo, priced at \u20b924900.00 \u2013 perfect for all-mountain and freestyle riding!\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** from eCommerce Test Store Demo, priced at \u20b924.95 - a winter sport accessory!\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor at \u20b910.00 - a great way to let someone choose their favorite snowboard gear!"
+  },
+  {
+    "role": "user",
+    "message": "give me product in price range of rs 500-4000"
+  },
+  {
+    "role": "bot",
+    "message": "\ud83d\udecd\ufe0f **The Complete Snowboard**\n\ud83d\udcb0 Price: \u20b9699.95\n\ud83d\udcc4 This <b>PREMIUM</b> <i>snowboard</i> is so <b>SUPER</b><i>DUPER</i> awesome!\n\ud83c\udff7\ufe0f Tags: Premium, Snow, Snowboard, Sport, Winter\n\ud83c\udfa8 Available colors: Powder, Sunset, Electric, Ice, Dawn\n\ud83c\udfe2 Vendor: Snowboard Vendor\n\ud83d\udd17 [View Product](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)"
+  },
+  {
+    "role": "user",
+    "message": "Show me discounts and offers."
+  },
+  {
+    "role": "bot",
+    "message": "Currently, I do not have information about specific discounts or active offers. However, here are some of our products, that might interest you.\n\n*   **[Gift Card](https://ecommerce-test-store-demo.myshopify.com/products/gift-card)** from Snowboard Vendor at \u20b910.00 - a great way to let someone choose their favorite snowboard gear!\n*   **[The 3p Fulfilled Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-3p-fulfilled-snowboard)** from eCommerce Test Store Demo, is priced at \u20b92629.95.\n*   **[The Archived Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-archived-snowboard)** from Snowboard Vendor, is priced at \u20b9629.95.\n*   **[The Collection Snowboard: Hydrogen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-hydrogen)** from Hydrogen Vendor, is priced at \u20b9600.00.\n*   **[The Collection Snowboard: Liquid](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-liquid)** from Hydrogen Vendor, is priced at \u20b9749.95.\n*   **[The Collection Snowboard: Oxygen](https://ecommerce-test-store-demo.myshopify.com/products/the-collection-snowboard-oxygen)** from Hydrogen Vendor, is priced at \u20b91025.00.\n*   **[The Compare at Price Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-compare-at-price-snowboard)** from eCommerce Test Store Demo, is priced at \u20b9785.95.\n*   **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** from Snowboard Vendor, is priced at \u20b9699.95.\n*   **[The Hidden Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-hidden-snowboard)** from Snowboard Vendor, is priced at \u20b9749.95.\n*   **[The Inventory Not Tracked Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-inventory-not-tracked-snowboard)** from eCommerce Test Store Demo, is priced at \u20b9949.95.\n*   **[The Minimal Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-minimal-snowboard)** from eCommerce Test Store Demo, is priced at \u20b9885.95.\n*   **[The Multi-location Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-location-snowboard)** from eCommerce Test Store Demo, is priced at \u20b9729.95.\n*   **[The Multi-managed Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-multi-managed-snowboard)** from Multi-managed Vendor, is priced at \u20b9629.95.\n*   **[The Out of Stock Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-out-of-stock-snowboard)** from eCommerce Test Store Demo, is priced at \u20b9885.95.\n*   **[The Videographer Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-videographer-snowboard)** from eCommerce Test Store Demo, is priced at \u20b9885.95.\n\n"
+  },
+  {
+    "role": "user",
+    "message": "Asphalt Howler\u2122 \u2013 Aggressive Trick Skateboard"
+  },
+  {
+    "role": "bot",
+    "message": "Yes, we have the **[Asphalt Howler\u2122 \u2013 Aggressive Trick Skateboard](https://ecommerce-test-store-demo.myshopify.com/products/asphalt-howler\u2122-aggressive-trick-skateboard)** in stock! It's from eCommerce Test Store Demo and is priced at \u20b96999.00. It is tagged as an \"Accessory\" and \"Premium\".\n\n"
+  },
+  {
+    "role": "user",
+    "message": "Hii"
+  },
+  {
+    "role": "bot",
+    "message": "Hello there! \ud83d\udc4b Is there anything I can help you with today? Perhaps you're looking for some cool skateboards or snowboards? Let me know what you have in mind!\n"
+  },
+  {
+    "role": "user",
+    "message": "ThunderCrave"
+  },
+  {
+    "role": "bot",
+    "message": "Yes, we do have the **[ThunderCrave\u2122 \u2013 Electric Pulse Cruiser](https://ecommerce-test-store-demo.myshopify.com/products/thundercrave\u2122-electric-pulse-cruiser)**! It's from eCommerce Test Store Demo and is priced at \u20b912500.00.\n"
+  }
+]

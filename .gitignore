@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Product data (local only)
+shopify_products.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ngrok
+ngrok.exe
+ngrok-v3-stable-windows-amd64/
+ngrok-v3-stable-windows-amd64.zip 

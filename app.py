@@ -13,7 +13,7 @@ load_dotenv()
 SHOP_NAME = "ecommerce-test-store-demo"
 SHOP_URL = f"https://ecommerce-test-store-demo.myshopify.com"
 SHOPIFY_ACCESS_TOKEN = os.getenv("SHOPIFY_API_KEY")
-products_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'products.json')
+products_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'shopify_products.json')
 
 # Store currency (will be fetched from Shopify)
 STORE_CURRENCY = "USD"  # Default fallback
@@ -554,7 +554,7 @@ if __name__ == "__main__":
             if user_query.lower() in ['quit', 'exit', 'bye']:
                 print("Goodbye!")
                 break
-            # Always use the latest products.json
+            # Always use the latest shopify_products.json
             try:
                 with open(products_file, 'r') as json_file:
                     products_latest = json.load(json_file)

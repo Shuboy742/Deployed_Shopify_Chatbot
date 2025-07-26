@@ -1,12 +1,10 @@
-SHOPIFY_API_KEY= "Your shopify API Key"
-GEMINI_API_KEY = "Your Gemini API Key"
-SHOP_NAME = "Your Shop Name"
-
 import os
 from dotenv import load_dotenv
 
+# Load environment variables from .env file
 load_dotenv()
 
-import json
-with open('data/products.json', 'w') as f:
-    json.dump([{"test": "ok"}], f)
+# Configuration variables
+SHOPIFY_API_KEY = os.getenv("SHOPIFY_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+SHOP_NAME = os.getenv("SHOP_NAME")

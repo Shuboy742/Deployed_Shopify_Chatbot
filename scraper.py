@@ -38,9 +38,9 @@ def fetch_products_from_api():
                 "image": product.get("image"),
             })
 
-        with open("data/products.json", "w") as f:
+        with open("shopify_products.json", "w") as f:
             json.dump(products, f, indent=4)
-        print(f"Successfully saved {len(products)} products to data/products.json")
+        print(f"Successfully saved {len(products)} products to shopify_products.json")
         return products
         
     except Exception as e:
