@@ -725,16 +725,6 @@ def chat():
         # Append new user message
         chat_history.append({'role': 'user', 'message': user_query})
 
-        # Handle short farewell/closing intents early to avoid model/network overhead
-        farewell_terms = [
-            'bye', 'goodbye', 'see you', 'cya', 'later', 'thanks', 'thank you', 'ttyl'
-        ]
-        if any(term in query_lower for term in farewell_terms):
-            answer = "Goodbye! If you need anything else, feel free to ask."
-            chat_history.append({'role': 'bot', 'message': answer})
-            save_chat_history(user_id, chat_history)
-            return jsonify({'response': answer})
-
         # Check if this is a color-related query
         query_lower = user_query.lower()
         color_keywords = [
