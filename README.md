@@ -92,11 +92,11 @@ Render provides a stable HTTPS URL (no rotating links).
 3) Settings:
    - Name: `deployed-shopify-chatbot` (URL becomes `https://deployed-shopify-chatbot.onrender.com`)
    - Build Command:
-     ```sh
+```sh
      pip install --upgrade pip && pip install -r requirements.txt
-     ```
+```
    - Start Command:
-     ```sh
+```sh
      python app.py api
      ```
    - Environment Variables:
