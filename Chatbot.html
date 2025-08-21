@@ -196,9 +196,17 @@
     const userMessageDiv = document.createElement("div");
     userMessageDiv.className = "user-message";
     userMessageDiv.textContent = userInput;
-    document.getElementById("messages").appendChild(userMessageDiv);
+    const messages = document.getElementById("messages");
+    messages.appendChild(userMessageDiv);
 
     userInputElem.value = "";
+
+    // Show thinking indicator
+    const thinkingDiv = document.createElement("div");
+    thinkingDiv.className = "bot-message";
+    thinkingDiv.textContent = "🤖 Thinking...";
+    messages.appendChild(thinkingDiv);
+    messages.scrollTop = messages.scrollHeight;
 
     try {
       const response = await fetch(`${API_BASE}/chat`, {
@@ -212,19 +220,12 @@
       const data = await response.json();
       const botMessage = data.response || "⚠️ No response";
 
-      const botMessageDiv = document.createElement("div");
-      botMessageDiv.className = "bot-message";
-      botMessageDiv.innerHTML = marked.parse(botMessage);
-      document.getElementById("messages").appendChild(botMessageDiv);
+      thinkingDiv.innerHTML = marked.parse(botMessage);
     } catch (error) {
-      const errorDiv = document.createElement("div");
-      errorDiv.className = "bot-message";
-      errorDiv.textContent = "⚠️ Failed to connect to chatbot.";
-      document.getElementById("messages").appendChild(errorDiv);
+      thinkingDiv.textContent = "⚠️ Failed to connect to chatbot.";
     }
 
-    // Scroll to bottom
-    const messages = document.getElementById("messages");
+    // Ensure scroll stays at bottom
     messages.scrollTop = messages.scrollHeight;
   }
 
