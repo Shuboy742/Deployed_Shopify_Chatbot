@@ -452,31 +452,33 @@ def query_gemini(user_query, context):
         return "Sorry, something went wrong while processing your request."
 
 app = Flask(__name__)
-# Explicit CORS setup to ensure preflight responses include required headers
+
+# Lock CORS to your Shopify store (override via ALLOWED_ORIGIN env if needed)
+ALLOWED_ORIGIN = os.getenv('ALLOWED_ORIGIN', 'https://ecommerce-test-store-demo.myshopify.com')
 CORS(
     app,
-    resources={r"/*": {"origins": "*"}},
+    resources={
+        r"/chat": {"origins": [ALLOWED_ORIGIN]},
+        r"/history": {"origins": [ALLOWED_ORIGIN]},
+        r"/webhook/*": {"origins": "*"}
+    },
     supports_credentials=False
 )
 
 @app.after_request
 def add_cors_headers(response):
-    origin = request.headers.get('Origin', '*')
-    request_headers = request.headers.get('Access-Control-Request-Headers', '*')
-
-    # Allow the requesting origin (or *)
-    response.headers['Access-Control-Allow-Origin'] = origin if origin else '*'
-    response.headers['Vary'] = 'Origin'
-
-    # Echo requested headers or allow all
-    response.headers['Access-Control-Allow-Headers'] = request_headers if request_headers else '*'
-
-    # Allowed methods
-    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
-
-    # Optional: cache preflight for 1 hour
-    response.headers['Access-Control-Max-Age'] = '3600'
+    # Ensure headers are always present (including preflight 204)
+    response.headers.setdefault('Access-Control-Allow-Origin', ALLOWED_ORIGIN)
+    response.headers.setdefault('Vary', 'Origin')
+    response.headers.setdefault('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    response.headers.setdefault('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+    response.headers.setdefault('Access-Control-Max-Age', '3600')
     return response
+
+# Silence favicon 404s
+@app.route('/favicon.ico')
+def _favicon():
+    return ('', 204)
 
 @app.route('/webhook/products', methods=['POST'])
 def shopify_webhook():
