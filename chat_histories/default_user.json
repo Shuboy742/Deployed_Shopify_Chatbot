@@ -134,5 +134,21 @@
   {
     "role": "bot",
     "message": "Yes, we do have the **[ThunderCrave\u2122 \u2013 Electric Pulse Cruiser](https://ecommerce-test-store-demo.myshopify.com/products/thundercrave\u2122-electric-pulse-cruiser)**! It's from eCommerce Test Store Demo and is priced at \u20b912500.00.\n"
+  },
+  {
+    "role": "user",
+    "message": "What are the latest products?"
+  },
+  {
+    "role": "bot",
+    "message": "Alright, here are some of the latest products we've got in the store:\n\n*   **[Asphalt Howler\u2122 \u2013 Aggressive Trick Skateboard](https://ecommerce-test-store-demo.myshopify.com/products/asphalt-howler\u2122-aggressive-trick-skateboard)** from eCommerce Test Store Demo, priced at \u20b96999.00. It's tagged as \"Accessory\" and \"Premium\".\n*   **[DriftNova\u2122 \u2013 Premium Street Cruiser Skateboard](https://ecommerce-test-store-demo.myshopify.com/products/driftnova\u2122-premium-street-cruiser-skateboard)** from eCommerce Test Store Demo, priced at \u20b95499.00 and tagged as \"Sport\".\n*   **[JB Snowstorm X1 \u2013 All-Mountain Freestyle Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/jb-snowstorm-x1-all-mountain-freestyle-snowboard)** from eCommerce Test Store Demo, priced at \u20b924900.00.\n*   **[Selling Plans Ski Wax](https://ecommerce-test-store-demo.myshopify.com/products/selling-plans-ski-wax)** from eCommerce Test Store Demo, priced at \u20b924.95 and tagged as \"Accessory\", \"Sport\", and \"Winter\".\n"
+  },
+  {
+    "role": "user",
+    "message": "Can you recommend a product?"
+  },
+  {
+    "role": "bot",
+    "message": "Of course! Based on our catalog, if you're into skateboards, I'd recommend the **[Asphalt Howler\u2122 \u2013 Aggressive Trick Skateboard](https://ecommerce-test-store-demo.myshopify.com/products/asphalt-howler\u2122-aggressive-trick-skateboard)** from eCommerce Test Store Demo. It's priced at \u20b96999.00 and is tagged as \"Accessory\" and \"Premium,\" so it's a great choice for someone looking for quality and performance!\n\nIf you're looking for snowboards I would recommend **[The Complete Snowboard](https://ecommerce-test-store-demo.myshopify.com/products/the-complete-snowboard)** from Snowboard Vendor, priced at \u20b9699.95, this is a PREMIUM snowboard and its SUPER DUPER awesome!\n"
   }
 ]
