@@ -19,8 +19,8 @@ A comprehensive AI-powered chatbot for Shopify stores that provides intelligent 
 - Python 3.9 or higher (Tested on 3.12)
 - Shopify store with API access
 - Google Gemini API key
-- [ngrok](https://ngrok.com/) (for public URL/webhooks)
 - Git
+- Render account (free) for a stable HTTPS backend URL
 
 ---
 
@@ -29,8 +29,8 @@ A comprehensive AI-powered chatbot for Shopify stores that provides intelligent 
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/Shuboy742/EComm_Shopify_Chatbot.git
-cd EComm_Shopify_Chatbot
+git clone https://github.com/Shuboy742/Deployed_Shopify_Chatbot.git
+cd Deployed_Shopify_Chatbot
 ```
 
 ---
@@ -74,7 +74,7 @@ SHOP_NAME=your_shop_name
 
 ---
 
-### 5. Run the Flask Backend
+### 5. Run the Flask Backend (local development)
 
 ```sh
 python app.py api
@@ -83,24 +83,32 @@ python app.py api
 
 ---
 
-### 6. Expose Your Backend with ngrok
+### 6. Deploy Backend on Render (recommended, free)
 
-#### **Windows:**
-```sh
-cd ngrok-v3-stable-windows-amd64
-ngrok.exe http 5000
-```
+Render provides a stable HTTPS URL (no rotating links).
 
-#### **Ubuntu/Linux/Mac:**
-```sh
-ngrok http 5000
-```
-#### **Windows:**
-```sh
-.\ngrok.exe http 5000
-```
+1) Push the repo to GitHub
+2) Render Dashboard → New → Web Service → Connect your repo
+3) Settings:
+   - Name: `deployed-shopify-chatbot` (URL becomes `https://deployed-shopify-chatbot.onrender.com`)
+   - Build Command:
+     ```sh
+     pip install --upgrade pip && pip install -r requirements.txt
+     ```
+   - Start Command:
+     ```sh
+     python app.py api
+     ```
+   - Environment Variables:
+     - `SHOPIFY_API_KEY` = your value
+     - `GEMINI_API_KEY` = your value
+     - `SHOP_NAME` = ecommerce-test-store-demo
+     - `ALLOWED_ORIGIN` = `https://ecommerce-test-store-demo.myshopify.com`
+4) Create & deploy. The URL will be shown in Render.
 
-- Copy the HTTPS forwarding URL (e.g., `https://abcd1234.ngrok-free.app`).
+Notes:
+- Free plan sleeps on inactivity; first request can be slow (cold start).
+- Manual redeploy: Deploys tab → Manual Deploy → Deploy latest commit.
 
 ---
 
@@ -109,15 +117,23 @@ ngrok http 5000
 - In Shopify Admin:  
   **Settings → Notifications → Webhooks → Create webhook**
 - **Event:** Product updates (and optionally creation/deletion)
-- **URL:** `https://your-ngrok-url.ngrok-free.app/webhook/products`
+- **URL:** `https://deployed-shopify-chatbot.onrender.com/webhook/products`
 - **Format:** JSON
 
 ---
 
-### 8. Test the Chatbot
+### 8. Integrate the Frontend Widget (Shopify theme) & Test
 
-- Use your frontend or Postman to POST to:  
-  `https://your-ngrok-url.ngrok-free.app/chat`
+- Add the widget code (`Chatbot.html` content) into your theme, e.g., `footer.liquid`.
+- Configure the API base once:
+  ```html
+  <script>
+    const API_BASE = "https://deployed-shopify-chatbot.onrender.com";
+  </script>
+  ```
+- The widget will POST to `${API_BASE}/chat` and shows a visible "🤖 Thinking..." indicator while replying.
+- Or test via Postman/curl:  
+  `https://deployed-shopify-chatbot.onrender.com/chat`
 - Example JSON body:
   ```json
   {
@@ -131,7 +147,7 @@ ngrok http 5000
 ## Project Structure
 
 ```
-EComm_Shopify_Chatbot/
+Deployed_Shopify_Chatbot/
 ├── app.py                  # Main Flask application
 ├── config.py               # Configuration loader
 ├── scraper.py              # Manual product data fetcher (optional)
@@ -140,7 +156,6 @@ EComm_Shopify_Chatbot/
 ├── .env                    # Environment variables (not tracked)
 ├── .gitignore              # Git ignore rules
 ├── README.md               # This file
-├── ngrok.exe / ngrok-v3-stable-windows-amd64/ # ngrok binary/folder
 └── venv/                   # Python virtual environment (not tracked)
 ```
 
@@ -156,8 +171,10 @@ EComm_Shopify_Chatbot/
 ## Troubleshooting
 
 - **ModuleNotFoundError:** Activate your virtual environment and install dependencies.
-- **Webhook not working:** Make sure ngrok is running and the correct URL is set in Shopify.
-- **Product data not updating:** Check webhook logs and ensure your backend is running.
+- **Webhook not working:** Ensure the Render URL is correct in Shopify webhook settings and your service is live.
+- **CORS blocked:** Set `ALLOWED_ORIGIN` in Render to your Shopify store domain.
+- **Cold start delay:** Free Render instances sleep on inactivity; first request may take a few seconds.
+- **favicon 404 in console:** Handled by a `/favicon.ico` 204 endpoint in the backend.
 
 ---
 
