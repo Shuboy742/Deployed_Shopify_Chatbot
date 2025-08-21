@@ -13,6 +13,7 @@ SHOP_NAME = "ecommerce-test-store-demo"
 SHOP_URL = f"https://ecommerce-test-store-demo.myshopify.com"
 SHOPIFY_ACCESS_TOKEN = os.getenv("SHOPIFY_API_KEY")
 products_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'shopify_products.json')
+full_export_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'shopify_full_export.json')
 
 # Store currency (will be fetched from Shopify)
 STORE_CURRENCY = "USD"  # Default fallback
@@ -45,6 +46,35 @@ def save_chat_history(user_id, history):
     with chat_history_lock:
         with open(path, 'w') as f:
             json.dump(history, f, indent=2)
+
+def load_products_from_disk():
+    """Load product data, preferring shopify_full_export.json if present.
+    Returns a list of product objects compatible with existing helpers.
+    """
+    # Try full export first
+    try:
+        if os.path.exists(full_export_file):
+            with open(full_export_file, 'r') as f:
+                data = json.load(f)
+            if isinstance(data, dict) and isinstance(data.get('products'), list):
+                return data['products']
+            if isinstance(data, list):
+                return data
+    except Exception:
+        pass
+    # Fallback to products_file
+    try:
+        if os.path.exists(products_file):
+            with open(products_file, 'r') as f:
+                data = json.load(f)
+            # Legacy file is usually a list already
+            if isinstance(data, list):
+                return data
+            if isinstance(data, dict) and isinstance(data.get('products'), list):
+                return data['products']
+    except Exception:
+        pass
+    return []
 
 def fetch_store_currency():
     """Fetch the store's currency from Shopify API"""
@@ -134,6 +164,79 @@ def extract_colors_from_product(product):
     
     # Remove duplicates and return
     return list(set(filtered_colors))
+
+def _normalize_text(value):
+    try:
+        return (value or "").lower()
+    except Exception:
+        return ""
+
+def _extract_price_range(query: str):
+    """Very light heuristic to detect min/max price from free text, returns (min_price,max_price) or (None,None)."""
+    q = query.replace(',', ' ')
+    nums = [float(x) for x in re.findall(r"\d+\.?\d*", q)]
+    if not nums:
+        return (None, None)
+    if len(nums) == 1:
+        # Single number – treat as max
+        return (None, nums[0])
+    # Multiple numbers – min/max of them
+    return (min(nums), max(nums))
+
+def score_product_relevance(query: str, product: dict) -> float:
+    """Compute a simple relevance score using keyword overlap, colors, vendor, tags, product_type, and rough price range."""
+    score = 0.0
+    q = _normalize_text(query)
+    words = [w for w in re.findall(r"\w+", q) if len(w) > 2]
+    title = _normalize_text(product.get('title'))
+    vendor = _normalize_text(product.get('vendor'))
+    tags = _normalize_text(product.get('tags'))
+    ptype = _normalize_text(product.get('product_type'))
+    body = _normalize_text(product.get('body_html'))
+    colors = [c.lower() for c in extract_colors_from_product(product)]
+
+    # Keyword matches
+    for w in words:
+        if w in title:
+            score += 5
+        if w in vendor:
+            score += 2
+        if w in tags:
+            score += 2
+        if w in ptype:
+            score += 1.5
+        if w in body:
+            score += 1
+
+    # Color boosts
+    for c in colors:
+        if c and c in q:
+            score += 6
+
+    # Price range hint
+    v = (product.get('variants') or [{}])[0]
+    price = v.get('price')
+    try:
+        price_val = float(str(price)) if price is not None else None
+    except Exception:
+        price_val = None
+    pmin, pmax = _extract_price_range(q)
+    if price_val is not None and (pmin is not None or pmax is not None):
+        if pmin is not None and price_val < pmin:
+            score -= 2
+        if pmax is not None and price_val > pmax:
+            score -= 2
+        if (pmin is None or price_val >= pmin) and (pmax is None or price_val <= pmax):
+            score += 4
+
+    return score
+
+def select_top_k_products(query: str, products: list, k: int = 12) -> list:
+    if not products:
+        return []
+    scored = [(score_product_relevance(query, p), p) for p in products]
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return [p for _, p in scored[:k]]
 
 def fetch_latest_products():
     if not SHOPIFY_ACCESS_TOKEN:
@@ -278,7 +381,9 @@ def generate_product_link(product):
 
 def format_product_card(product):
     title = product.get('title', 'Unnamed Product')
-    price = product.get('variants', [{}])[0].get('price', 'N/A')
+    variant = product.get('variants', [{}])[0]
+    price = variant.get('price', 'N/A')
+    compare_at_price = variant.get('compare_at_price')
     desc = (product.get('body_html') or product.get('product_type', '') or '').strip()
     desc = desc[:90] + ('...' if len(desc) > 90 else '') if desc else 'No description available.'
     tags = product.get('tags', '')
@@ -290,12 +395,22 @@ def format_product_card(product):
     
     link = generate_product_link(product)
     
-    # Format price with correct currency
+    # Format price with correct currency and show discount if available
     currency_symbol = get_currency_symbol(STORE_CURRENCY)
     formatted_price = f"{currency_symbol}{price}" if price != 'N/A' else 'N/A'
+    discount_line = ''
+    try:
+        if price not in (None, 'N/A') and compare_at_price:
+            p = float(str(price))
+            cap = float(str(compare_at_price))
+            if cap > p:
+                percent = int(round((cap - p) / cap * 100))
+                discount_line = f" (was {currency_symbol}{cap}, {percent}% off)"
+    except Exception:
+        pass
     
     card = f"🛍️ **{title}**\n"
-    card += f"💰 Price: {formatted_price}\n"
+    card += f"💰 Price: {formatted_price}{discount_line}\n"
     card += f"📄 {desc}\n"
     if tags:
         card += f"🏷️ Tags: {tags}\n"
@@ -366,6 +481,26 @@ def generate_chatbot_response(query, products, memory=None):
             return '\n\n'.join([format_product_card(p) for p in matches])
         else:
             return "Sorry, I couldn't find any product related to that."
+
+    # Discounts / offers / sales
+    if any(word in query_lower for word in ['discount', 'offer', 'offers', 'sale', 'deal', 'promotion', 'promo', 'coupon']):
+        discounted = []
+        for p in products:
+            try:
+                v = p.get('variants', [{}])[0]
+                price = v.get('price')
+                compare_at = v.get('compare_at_price')
+                if price is not None and compare_at is not None:
+                    p_val = float(str(price))
+                    cap_val = float(str(compare_at))
+                    if cap_val > p_val:
+                        discounted.append(p)
+            except Exception:
+                continue
+        if discounted:
+            return '\n\n'.join([format_product_card(p) for p in discounted])
+        else:
+            return "No discounted products right now. Please check again later."
     
     # Vendor
     if 'vendor' in query_lower or 'brand' in query_lower:
@@ -415,32 +550,73 @@ def format_product_data_for_prompt(products):
     entries = []
     currency_symbol = get_currency_symbol(STORE_CURRENCY)
     for product in products:
-        price = product.get("variants", [{}])[0].get("price", "")
-        formatted_price = f"{currency_symbol}{price}" if price else ""
+        variant = (product.get("variants") or [{}])[0]
+        price = variant.get("price")
+        compare_at = variant.get("compare_at_price")
+        discount_pct = None
+        try:
+            if price is not None and compare_at:
+                p_val = float(str(price))
+                cap_val = float(str(compare_at))
+                if cap_val > p_val:
+                    discount_pct = int(round((cap_val - p_val) / cap_val * 100))
+        except Exception:
+            pass
+
+        colors = extract_colors_from_product(product)
         entry = {
             "title": product.get("title", ""),
             "vendor": product.get("vendor", ""),
             "tags": product.get("tags", ""),
-            "handle": product.get("handle", ""),
-            "price": formatted_price,
-            "description": (product.get("body_html") or product.get("product_type", ""))[:200]
+            "collection_titles": [c.get("title") for c in product.get("collections", [])] if product.get("collections") else [],
+            "price": f"{currency_symbol}{price}" if price else "",
+            "compare_at": f"{currency_symbol}{compare_at}" if compare_at else "",
+            "discount_pct": discount_pct,
+            "colors": colors,
+            "url": generate_product_link(product) or "",
+            "description": (product.get("body_html") or product.get("product_type", ""))[:180]
         }
         entries.append(entry)
     return json.dumps(entries, indent=2)
 
 # Gemini 2.0 Flash Request Function
 
-def query_gemini(user_query, context):
+def query_gemini(user_query, context, temperature: float = 0.3):
+    # If key is missing, signal caller to fallback
+    if not GEMINI_API_KEY:
+        return ""
     headers = {
         "Content-Type": "application/json"
     }
-    prompt = f"""You are a helpful ecommerce assistant for a Shopify store.\nAnswer ONLY the user's question using the product catalog below.\nRespond in a friendly and human-like tone with relevant product names, prices, vendors, tags, delivery info, etc.\n\nProduct Catalog:\n{context}\n\nUser Question:\n{user_query}\n\nAnswer:"""
+    prompt = f"""
+You are a helpful ecommerce assistant for a Shopify store.
+Rules:
+- Answer crisply in natural, human language (2–4 short sentences or a tiny list).
+- Use information ONLY from the catalog context provided.
+- When mentioning a product, include its current price; mention discounts only if available.
+- Prefer the best 1–3 matches, not long lists.
+- If colors are asked, list available colors succinctly.
+
+Product Catalog (JSON):
+{context}
+
+User Question:
+{user_query}
+
+Answer:
+"""
     body = {
         "contents": [
             {
                 "parts": [{"text": prompt}]
             }
-        ]
+        ],
+        "generationConfig": {
+            "temperature": temperature,
+            "topK": 32,
+            "topP": 0.9,
+            "maxOutputTokens": 512
+        }
     }
     try:
         res = requests.post(GEMINI_API_URL, headers=headers, json=body)
@@ -449,7 +625,30 @@ def query_gemini(user_query, context):
         return reply
     except Exception as e:
         print("Gemini API Error:", e)
-        return "Sorry, something went wrong while processing your request."
+        return ""
+
+def rewrite_with_gemini(text: str) -> str:
+    """Use Gemini to crispen/shorten a draft answer if API is available; otherwise return original."""
+    if not GEMINI_API_KEY or not text:
+        return text
+    prompt = f"""
+Rewrite the following answer to be crisp, human, and at most 3 short sentences. Keep prices/discounts intact and include links if present.
+
+Answer:
+{text}
+"""
+    headers = {"Content-Type": "application/json"}
+    body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 256}
+    }
+    try:
+        res = requests.post(GEMINI_API_URL, headers=headers, json=body)
+        res.raise_for_status()
+        return res.json()['candidates'][0]['content']['parts'][0]['text']
+    except Exception as e:
+        print("Gemini rewrite Error:", e)
+        return text
 
 app = Flask(__name__)
 
@@ -498,8 +697,7 @@ def chat():
         # Handle CORS preflight
         if request.method == 'OPTIONS':
             return ('', 204)
-        with open(products_file, 'r') as json_file:
-            products_latest = json.load(json_file)
+        products_latest = load_products_from_disk()
         data = request.get_json(silent=True)
         user_query = data.get('message', '') if data else ''
         user_id = data.get('user_id', 'default_user') if data else 'default_user'
@@ -524,29 +722,55 @@ def chat():
         query_has_colors = any(color in query_lower for color in color_keywords)
         query_mentions_color = any(word in query_lower for word in ['color', 'colour', 'coor', 'colors', 'colours'])
 
-        # Use local color detection for color queries, Gemini for others
+        # Use Gemini (with top-K product selection) as primary, with local fallback
         if query_has_colors or query_mentions_color:
-            answer = generate_chatbot_response(user_query, products_latest)
+            context_messages = []
+            for msg in chat_history[-10:]:
+                prefix = 'User:' if msg['role'] == 'user' else 'Bot:'
+                context_messages.append(f"{prefix} {msg['message']}")
+            top_k = select_top_k_products(user_query, products_latest, k=12)
+            context = format_product_data_for_prompt(top_k)
+            if context_messages:
+                context = f"Chat History:\n{chr(10).join(context_messages)}\n\nProduct Catalog:\n{context}"
+
+            answer = query_gemini(user_query, context, temperature=0.25)
+            # Fallback to local logic if Gemini fails or returns too little
+            if not answer or len(answer.strip()) < 5 or 'went wrong' in answer.lower():
+                answer = generate_chatbot_response(user_query, products_latest)
+                answer = rewrite_with_gemini(answer)
+            else:
+                # Linkify product names in Gemini answer
+                for product in products_latest:
+                    title = product.get('title', '')
+                    title_lower = title.lower()
+                    link = generate_product_link(product)
+                    if title and link and title_lower in answer.lower():
+                        answer = re.sub(rf'(?<!\[){re.escape(title)}(?!\])', f'[{title}]({link})', answer)
         else:
             # Use Gemini for non-color queries
             context_messages = []
             for msg in chat_history[-10:]:
                 prefix = 'User:' if msg['role'] == 'user' else 'Bot:'
                 context_messages.append(f"{prefix} {msg['message']}")
-            context = format_product_data_for_prompt(products_latest)
+            top_k = select_top_k_products(user_query, products_latest, k=12)
+            context = format_product_data_for_prompt(top_k)
             # Add chat history context to prompt
             if context_messages:
                 context = f"Chat History:\n{chr(10).join(context_messages)}\n\nProduct Catalog:\n{context}"
 
-            answer = query_gemini(user_query, context)
-
-            # Replace product name with clickable markdown link, and do not show the raw link
-            for product in products_latest:
-                title = product.get('title', '')
-                title_lower = title.lower()
-                link = generate_product_link(product)
-                if title and link and title_lower in answer.lower():
-                    answer = re.sub(rf'(?<!\[){re.escape(title)}(?!\])', f'[{title}]({link})', answer)
+            answer = query_gemini(user_query, context, temperature=0.3)
+            # Fallback to local logic if Gemini unavailable/failed
+            if not answer or len(answer.strip()) < 5:
+                answer = generate_chatbot_response(user_query, products_latest)
+                answer = rewrite_with_gemini(answer)
+            else:
+                # Replace product name with clickable markdown link, and do not show the raw link
+                for product in products_latest:
+                    title = product.get('title', '')
+                    title_lower = title.lower()
+                    link = generate_product_link(product)
+                    if title and link and title_lower in answer.lower():
+                        answer = re.sub(rf'(?<!\[){re.escape(title)}(?!\])', f'[{title}]({link})', answer)
 
         # Append bot response to chat history and save
         chat_history.append({'role': 'bot', 'message': answer})
@@ -576,18 +800,31 @@ if __name__ == "__main__":
         app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
     else:
         print("Welcome to Starky Shop Chatbot! Type 'quit' to exit.\n")
-        
+        chat_history = []
         while True:
             user_query = input("You: ").strip()
             if user_query.lower() in ['quit', 'exit', 'bye']:
                 print("Goodbye!")
                 break
-            # Always use the latest shopify_products.json
             try:
-                with open(products_file, 'r') as json_file:
-                    products_latest = json.load(json_file)
+                products_latest = load_products_from_disk()
             except Exception as e:
                 print("Error loading products:", e)
                 products_latest = []
-            answer = generate_chatbot_response(user_query, products_latest)
+
+            # Build minimal context and use Gemini first
+            context_messages = []
+            for msg in chat_history[-10:]:
+                prefix = 'User:' if msg['role'] == 'user' else 'Bot:'
+                context_messages.append(f"{prefix} {msg['message']}")
+            context = format_product_data_for_prompt(products_latest)
+            if context_messages:
+                context = f"Chat History:\n{chr(10).join(context_messages)}\n\nProduct Catalog:\n{context}"
+
+            answer = query_gemini(user_query, context)
+            if not answer or len(answer.strip()) < 5:
+                answer = generate_chatbot_response(user_query, products_latest)
+
+            chat_history.append({'role': 'user', 'message': user_query})
+            chat_history.append({'role': 'bot', 'message': answer})
             print(f"Bot: {answer}\n")
