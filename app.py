@@ -3,7 +3,6 @@ import json
 import requests
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import markdown
 from dotenv import load_dotenv
 import re
 import threading
@@ -453,7 +452,31 @@ def query_gemini(user_query, context):
         return "Sorry, something went wrong while processing your request."
 
 app = Flask(__name__)
-CORS(app)
+# Explicit CORS setup to ensure preflight responses include required headers
+CORS(
+    app,
+    resources={r"/*": {"origins": "*"}},
+    supports_credentials=False
+)
+
+@app.after_request
+def add_cors_headers(response):
+    origin = request.headers.get('Origin', '*')
+    request_headers = request.headers.get('Access-Control-Request-Headers', '*')
+
+    # Allow the requesting origin (or *)
+    response.headers['Access-Control-Allow-Origin'] = origin if origin else '*'
+    response.headers['Vary'] = 'Origin'
+
+    # Echo requested headers or allow all
+    response.headers['Access-Control-Allow-Headers'] = request_headers if request_headers else '*'
+
+    # Allowed methods
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+
+    # Optional: cache preflight for 1 hour
+    response.headers['Access-Control-Max-Age'] = '3600'
+    return response
 
 @app.route('/webhook/products', methods=['POST'])
 def shopify_webhook():
@@ -467,9 +490,12 @@ def shopify_webhook():
         return jsonify({'error': 'Webhook processing failed'}), 500
 
 # Update chat endpoint to use Gemini
-@app.route('/chat', methods=['POST'])
+@app.route('/chat', methods=['OPTIONS', 'POST'])
 def chat():
     try:
+        # Handle CORS preflight
+        if request.method == 'OPTIONS':
+            return ('', 204)
         with open(products_file, 'r') as json_file:
             products_latest = json.load(json_file)
         data = request.get_json(silent=True)
@@ -545,7 +571,7 @@ if __name__ == "__main__":
 
     # If 'api' is passed as an argument, run Flask API
     if len(sys.argv) > 1 and sys.argv[1] == 'api':
-        app.run(host="0.0.0.0", port=5000)
+        app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
     else:
         print("Welcome to Starky Shop Chatbot! Type 'quit' to exit.\n")
         

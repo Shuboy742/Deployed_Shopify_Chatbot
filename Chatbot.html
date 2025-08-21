@@ -176,6 +176,9 @@
 
 <!-- Chatbot JS -->
 <script>
+  // Set this once to your Render URL
+  const API_BASE = "https://shopify-app.onrender.com";
+
   function openChatbot() {
     document.getElementById("chatbox").style.display = "flex";
   }
@@ -198,7 +201,7 @@
     userInputElem.value = "";
 
     try {
-      const response = await fetch("https://14e2413305c1.ngrok-free.app/chat", {
+      const response = await fetch(`${API_BASE}/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
