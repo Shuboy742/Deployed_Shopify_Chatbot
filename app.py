@@ -330,6 +330,22 @@ def find_products_by_keyword(query, products):
     
     return matches
 
+def extract_products_in_text(text: str, products: list) -> list:
+    """Return products whose titles appear in the given text (case-insensitive)."""
+    if not text:
+        return []
+    t = text.lower()
+    hits = []
+    seen = set()
+    for p in products:
+        title = (p.get('title') or '').strip()
+        if not title:
+            continue
+        if title.lower() in t and title not in seen:
+            hits.append(p)
+            seen.add(title)
+    return hits
+
 def get_all_available_colors(products):
     """Get all available colors from the product data"""
     all_colors = set()
@@ -722,6 +738,15 @@ def chat():
         query_has_colors = any(color in query_lower for color in color_keywords)
         query_mentions_color = any(word in query_lower for word in ['color', 'colour', 'coor', 'colors', 'colours'])
 
+        # Infer focus products from the last bot message to support pronouns like "it/this/that"
+        focus_products = []
+        if chat_history:
+            for past in reversed(chat_history):
+                if past.get('role') == 'bot':
+                    focus_products = extract_products_in_text(past.get('message', ''), products_latest)
+                    if focus_products:
+                        break
+
         # Use Gemini (with top-K product selection) as primary, with local fallback
         if query_has_colors or query_mentions_color:
             context_messages = []
@@ -729,14 +754,34 @@ def chat():
                 prefix = 'User:' if msg['role'] == 'user' else 'Bot:'
                 context_messages.append(f"{prefix} {msg['message']}")
             top_k = select_top_k_products(user_query, products_latest, k=12)
-            context = format_product_data_for_prompt(top_k)
+            # Put focus products first (if any), then the rest of top-k
+            if focus_products:
+                focus_ids = {p.get('id') for p in focus_products}
+                merged = focus_products + [p for p in top_k if p.get('id') not in focus_ids]
+                context = format_product_data_for_prompt(merged[:12])
+            else:
+                context = format_product_data_for_prompt(top_k)
             if context_messages:
-                context = f"Chat History:\n{chr(10).join(context_messages)}\n\nProduct Catalog:\n{context}"
+                focus_titles = ', '.join([p.get('title','') for p in focus_products]) if focus_products else ''
+                focus_line = f"\nCurrent focus products (for pronouns): {focus_titles}\n" if focus_titles else ''
+                context = f"Chat History:\n{chr(10).join(context_messages)}{focus_line}\nProduct Catalog:\n{context}"
 
             answer = query_gemini(user_query, context, temperature=0.25)
             # Fallback to local logic if Gemini fails or returns too little
             if not answer or len(answer.strip()) < 5 or 'went wrong' in answer.lower():
-                answer = generate_chatbot_response(user_query, products_latest)
+                # Minimal pronoun-aware local handling
+                if any(tok in query_lower for tok in [' it ', ' this ', ' that ']) and focus_products:
+                    fp = focus_products[0]
+                    if any(k in query_lower for k in ['vendor','brand']):
+                        answer = f"Vendor for {fp.get('title','product')}: {fp.get('vendor','Unknown Vendor')}"
+                    elif query_mentions_color:
+                        cols = extract_colors_from_product(fp)
+                        ctext = ', '.join(cols) if cols else 'No color options'
+                        answer = f"Colors for {fp.get('title','product')}: {ctext}"
+                    else:
+                        answer = generate_chatbot_response(user_query, products_latest)
+                else:
+                    answer = generate_chatbot_response(user_query, products_latest)
                 answer = rewrite_with_gemini(answer)
             else:
                 # Linkify product names in Gemini answer
@@ -753,10 +798,17 @@ def chat():
                 prefix = 'User:' if msg['role'] == 'user' else 'Bot:'
                 context_messages.append(f"{prefix} {msg['message']}")
             top_k = select_top_k_products(user_query, products_latest, k=12)
-            context = format_product_data_for_prompt(top_k)
+            if focus_products:
+                focus_ids = {p.get('id') for p in focus_products}
+                merged = focus_products + [p for p in top_k if p.get('id') not in focus_ids]
+                context = format_product_data_for_prompt(merged[:12])
+            else:
+                context = format_product_data_for_prompt(top_k)
             # Add chat history context to prompt
             if context_messages:
-                context = f"Chat History:\n{chr(10).join(context_messages)}\n\nProduct Catalog:\n{context}"
+                focus_titles = ', '.join([p.get('title','') for p in focus_products]) if focus_products else ''
+                focus_line = f"\nCurrent focus products (for pronouns): {focus_titles}\n" if focus_titles else ''
+                context = f"Chat History:\n{chr(10).join(context_messages)}{focus_line}\nProduct Catalog:\n{context}"
 
             answer = query_gemini(user_query, context, temperature=0.3)
             # Fallback to local logic if Gemini unavailable/failed
