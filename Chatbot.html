@@ -81,7 +81,7 @@
 
   .bot-message {
     background: #f1f1f1;
-    color: #333;
+    color: #000;
     align-self: flex-start;
   }
 
@@ -205,6 +205,7 @@
     const thinkingDiv = document.createElement("div");
     thinkingDiv.className = "bot-message";
     thinkingDiv.textContent = "🤖 Thinking...";
+    thinkingDiv.style.color = "#000";
     messages.appendChild(thinkingDiv);
     messages.scrollTop = messages.scrollHeight;
 
