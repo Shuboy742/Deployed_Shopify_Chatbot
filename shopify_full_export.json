@@ -1,0 +1,2551 @@
+{
+  "products": [
+    {
+      "id": 8899151528185,
+      "title": "Asphalt Howler\u2122 \u2013 Aggressive Trick Skateboard",
+      "body_html": "<ul>\n<li data-start=\"157\" data-end=\"211\">\n<p data-start=\"159\" data-end=\"211\">8.25\u201d Pro-grade 7-layer bamboo + maple hybrid deck</p>\n</li>\n<li data-start=\"212\" data-end=\"271\">\n<p data-start=\"214\" data-end=\"271\">Custom <strong data-start=\"221\" data-end=\"248\">wolf howling under moon</strong> graphic (UV printed)</p>\n</li>\n<li data-start=\"272\" data-end=\"306\">\n<p data-start=\"274\" data-end=\"306\">Shock-absorbing 54mm PU wheels</p>\n</li>\n<li data-start=\"307\" data-end=\"349\">\n<p data-start=\"309\" data-end=\"349\">ABEC-11 stealth black ceramic bearings</p>\n</li>\n<li data-start=\"350\" data-end=\"400\">\n<p data-start=\"352\" data-end=\"400\">Reinforced hollow trucks for lightweight flips</p>\n</li>\n<li data-start=\"401\" data-end=\"436\">\n<p data-start=\"403\" data-end=\"436\">Double kicktail with deep concave<br><br></p>\n<h3 data-start=\"443\" data-end=\"467\">Color Variants:</h3>\n<ul data-start=\"468\" data-end=\"563\">\n<li data-start=\"468\" data-end=\"498\">\n<p data-start=\"470\" data-end=\"498\">Lunar Night (Black &amp; Grey)</p>\n</li>\n<li data-start=\"499\" data-end=\"530\">\n<p data-start=\"501\" data-end=\"530\">Ember Fang (Red &amp; Charcoal)</p>\n</li>\n<li data-start=\"531\" data-end=\"563\">\n<p data-start=\"533\" data-end=\"563\">Arctic Howl (White &amp; Ice Blue)</p>\n</li>\n</ul>\n</li>\n</ul>",
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "accessories",
+      "handle": "asphalt-howler\u2122-aggressive-trick-skateboard",
+      "tags": "Accessory, Premium",
+      "status": "active",
+      "published_at": "2025-07-26T07:38:21-04:00",
+      "template_suffix": "",
+      "options": [
+        {
+          "id": 11200443547897,
+          "product_id": 8899151528185,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46679938433273,
+          "title": "Default Title",
+          "sku": null,
+          "price": "6999.00",
+          "compare_at_price": "7850.00",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48762446905593,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 1,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-26T07:38:21-04:00"
+            },
+            {
+              "available": 1,
+              "location_id": 83352748281,
+              "updated_at": "2025-07-26T07:38:21-04:00"
+            }
+          ],
+          "barcode": "",
+          "weight": 780.0,
+          "weight_unit": "g",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 48087686086905,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/ashpalt.jpg?v=1753529782",
+          "alt": null,
+          "position": 1,
+          "width": 1280,
+          "height": 960
+        }
+      ],
+      "image": {
+        "id": 48087686086905,
+        "alt": null,
+        "position": 1,
+        "product_id": 8899151528185,
+        "created_at": "2025-07-26T07:36:20-04:00",
+        "updated_at": "2025-07-26T07:36:21-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/48087686086905",
+        "width": 1280,
+        "height": 960,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/ashpalt.jpg?v=1753529782",
+        "variant_ids": []
+      },
+      "collections": [
+        {
+          "id": 448468517113,
+          "title": "Home page",
+          "type": "custom"
+        }
+      ],
+      "metafields": [
+        {
+          "id": 33776200679673,
+          "namespace": "test_data",
+          "key": "snowboard_length",
+          "value": "{\"value\":250.0,\"unit\":\"cm\"}",
+          "type": "dimension"
+        },
+        {
+          "id": 33776200712441,
+          "namespace": "shopify",
+          "key": "color-pattern",
+          "value": "[\"gid://shopify/Metaobject/106695655673\",\"gid://shopify/Metaobject/106694672633\",\"gid://shopify/Metaobject/106694803705\",\"gid://shopify/Metaobject/106694869241\"]",
+          "type": "list.metaobject_reference"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8899149005049,
+      "title": "DriftNova\u2122 \u2013 Premium Street Cruiser Skateboard",
+      "body_html": "<ul>\n<li data-start=\"175\" data-end=\"209\">\n<p data-start=\"177\" data-end=\"209\">8.0\u201d Canadian Maple 7-ply deck</p>\n</li>\n<li data-start=\"210\" data-end=\"253\">\n<p data-start=\"212\" data-end=\"253\">Custom laser-engraved DriftNova graphic</p>\n</li>\n<li data-start=\"254\" data-end=\"306\">\n<p data-start=\"256\" data-end=\"306\">High-rebound 52mm wheels (street/park optimized)</p>\n</li>\n<li data-start=\"307\" data-end=\"336\">\n<p data-start=\"309\" data-end=\"336\">ABEC-9 precision bearings</p>\n</li>\n<li data-start=\"337\" data-end=\"368\">\n<p data-start=\"339\" data-end=\"368\">Lightweight aluminum trucks</p>\n</li>\n<li data-start=\"369\" data-end=\"407\">\n<p data-start=\"371\" data-end=\"407\">Medium concave for tricks &amp; cruising<br><br>Colors Available<br></p>\n<ul>\n<li data-start=\"446\" data-end=\"461\">\n<p data-start=\"448\" data-end=\"461\">Galaxy Fade</p>\n</li>\n<li data-start=\"462\" data-end=\"482\">\n<p data-start=\"464\" data-end=\"482\">Midnight Asphalt</p>\n</li>\n<li data-start=\"483\" data-end=\"500\">\n<p data-start=\"485\" data-end=\"500\">Neon Graffiti</p>\n</li>\n</ul>\n</li>\n</ul>",
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "snowboard",
+      "handle": "driftnova\u2122-premium-street-cruiser-skateboard",
+      "tags": "Sport",
+      "status": "active",
+      "published_at": "2025-07-26T07:23:47-04:00",
+      "template_suffix": "",
+      "options": [
+        {
+          "id": 11200440729849,
+          "product_id": 8899149005049,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46679926309113,
+          "title": "Default Title",
+          "sku": null,
+          "price": "5499.00",
+          "compare_at_price": "6854.00",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48762434781433,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 1,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-26T07:23:46-04:00"
+            },
+            {
+              "available": 1,
+              "location_id": 83352748281,
+              "updated_at": "2025-07-26T07:23:46-04:00"
+            }
+          ],
+          "barcode": "",
+          "weight": 500.0,
+          "weight_unit": "g",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 48087600496889,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/dn.webp?v=1753528894",
+          "alt": null,
+          "position": 1,
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "id": 48087600529657,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/dn1.jpg?v=1753528894",
+          "alt": null,
+          "position": 2,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 48087600496889,
+        "alt": null,
+        "position": 1,
+        "product_id": 8899149005049,
+        "created_at": "2025-07-26T07:21:32-04:00",
+        "updated_at": "2025-07-26T07:21:34-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/48087600496889",
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/dn.webp?v=1753528894",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [
+        {
+          "id": 33776173940985,
+          "namespace": "test_data",
+          "key": "snowboard_length",
+          "value": "{\"value\":289.0,\"unit\":\"cm\"}",
+          "type": "dimension"
+        },
+        {
+          "id": 33776173973753,
+          "namespace": "shopify",
+          "key": "color-pattern",
+          "value": "[\"gid://shopify/Metaobject/106695622905\",\"gid://shopify/Metaobject/106694672633\",\"gid://shopify/Metaobject/106695655673\",\"gid://shopify/Metaobject/106695688441\"]",
+          "type": "list.metaobject_reference"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830639353,
+      "title": "Gift Card",
+      "body_html": "This is a gift card for the store",
+      "vendor": "Snowboard Vendor",
+      "product_type": "giftcard",
+      "handle": "gift-card",
+      "tags": "",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:37-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182368981241,
+          "product_id": 8882830639353,
+          "name": "Denominations",
+          "position": 1,
+          "values": [
+            "$10",
+            "$25",
+            "$50",
+            "$100"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635849908473,
+          "title": "$10",
+          "sku": null,
+          "price": "10.00",
+          "compare_at_price": null,
+          "option1": "$10",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470330105,
+          "inventory_policy": "deny",
+          "inventory_management": null,
+          "inventory_levels": [
+            {
+              "available": null,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:36-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": false
+        },
+        {
+          "id": 46635849941241,
+          "title": "$25",
+          "sku": null,
+          "price": "25.00",
+          "compare_at_price": null,
+          "option1": "$25",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470362873,
+          "inventory_policy": "deny",
+          "inventory_management": null,
+          "inventory_levels": [
+            {
+              "available": null,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:36-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": false
+        },
+        {
+          "id": 46635849974009,
+          "title": "$50",
+          "sku": null,
+          "price": "50.00",
+          "compare_at_price": null,
+          "option1": "$50",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470395641,
+          "inventory_policy": "deny",
+          "inventory_management": null,
+          "inventory_levels": [
+            {
+              "available": null,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:36-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": false
+        },
+        {
+          "id": 46635850006777,
+          "title": "$100",
+          "sku": null,
+          "price": "100.00",
+          "compare_at_price": null,
+          "option1": "$100",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470428409,
+          "inventory_policy": "deny",
+          "inventory_management": null,
+          "inventory_levels": [
+            {
+              "available": null,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:36-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": false
+        }
+      ],
+      "images": [
+        {
+          "id": 47865540935929,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/gift_card.png?v=1752237398",
+          "alt": "Gift card that shows text: Generated data gift card",
+          "position": 1,
+          "width": 2881,
+          "height": 2881
+        }
+      ],
+      "image": {
+        "id": 47865540935929,
+        "alt": "Gift card that shows text: Generated data gift card",
+        "position": 1,
+        "product_id": 8882830639353,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865540935929",
+        "width": 2881,
+        "height": 2881,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/gift_card.png?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8899147727097,
+      "title": "JB Snowstorm X1 \u2013 All-Mountain Freestyle Snowboard",
+      "body_html": "<ul>\n<li data-start=\"192\" data-end=\"230\">\n<p data-start=\"194\" data-end=\"230\"><strong data-start=\"194\" data-end=\"203\">Type:</strong> All-Mountain / Freestyle</p>\n</li>\n<li data-start=\"231\" data-end=\"274\">\n<p data-start=\"233\" data-end=\"274\"><strong data-start=\"233\" data-end=\"252\">Length Options:</strong> 148cm, 154cm, 160cm</p>\n</li>\n<li data-start=\"275\" data-end=\"337\">\n<p data-start=\"277\" data-end=\"337\"><strong data-start=\"277\" data-end=\"286\">Flex:</strong> Medium (6/10) \u2013 perfect balance of pop &amp; control</p>\n</li>\n<li data-start=\"338\" data-end=\"386\">\n<p data-start=\"340\" data-end=\"386\"><strong data-start=\"340\" data-end=\"349\">Core:</strong> Ultra-lightweight poplar wood core</p>\n</li>\n<li data-start=\"387\" data-end=\"446\">\n<p data-start=\"389\" data-end=\"446\"><strong data-start=\"389\" data-end=\"398\">Base:</strong> Sintered Speed Glide\u2122 base for max durability</p>\n</li>\n<li data-start=\"447\" data-end=\"504\">\n<p data-start=\"449\" data-end=\"504\"><strong data-start=\"449\" data-end=\"468\">Camber Profile:</strong> Hybrid camber for control + float</p>\n</li>\n<li data-start=\"505\" data-end=\"558\">\n<p data-start=\"507\" data-end=\"558\"><strong data-start=\"507\" data-end=\"517\">Edges:</strong> FrostBite edge tech for icy conditions</p>\n</li>\n<li data-start=\"559\" data-end=\"628\">\n<p data-start=\"561\" data-end=\"628\"><strong data-start=\"561\" data-end=\"574\">Graphics:</strong> Matte black base with neon JB logo &amp; mountain artwork</p>\n</li>\n</ul>",
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "",
+      "handle": "jb-snowstorm-x1-all-mountain-freestyle-snowboard",
+      "tags": "",
+      "status": "active",
+      "published_at": "2025-07-26T07:09:11-04:00",
+      "template_suffix": "",
+      "options": [
+        {
+          "id": 11200439124217,
+          "product_id": 8899147727097,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46679917723897,
+          "title": "Default Title",
+          "sku": null,
+          "price": "24900.00",
+          "compare_at_price": "30000.00",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48762426196217,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 0,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-26T07:09:08-04:00"
+            },
+            {
+              "available": 0,
+              "location_id": 83352748281,
+              "updated_at": "2025-07-26T07:09:08-04:00"
+            }
+          ],
+          "barcode": "",
+          "weight": 750.0,
+          "weight_unit": "g",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 48087521394937,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snw.webp?v=1753527994",
+          "alt": null,
+          "position": 1,
+          "width": 452,
+          "height": 452
+        },
+        {
+          "id": 48087521427705,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snw2.avif?v=1753527995",
+          "alt": null,
+          "position": 2,
+          "width": 2500,
+          "height": 2500
+        }
+      ],
+      "image": {
+        "id": 48087521394937,
+        "alt": null,
+        "position": 1,
+        "product_id": 8899147727097,
+        "created_at": "2025-07-26T07:06:33-04:00",
+        "updated_at": "2025-07-26T07:06:34-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/48087521394937",
+        "width": 452,
+        "height": 452,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snw.webp?v=1753527994",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [
+        {
+          "id": 33776152051961,
+          "namespace": "test_data",
+          "key": "snowboard_length",
+          "value": "{\"value\":350.0,\"unit\":\"cm\"}",
+          "type": "dimension"
+        },
+        {
+          "id": 33776152084729,
+          "namespace": "shopify",
+          "key": "color-pattern",
+          "value": "[\"gid://shopify/Metaobject/106694672633\",\"gid://shopify/Metaobject/106694803705\",\"gid://shopify/Metaobject/106694869241\",\"gid://shopify/Metaobject/106694902009\"]",
+          "type": "list.metaobject_reference"
+        },
+        {
+          "id": 33776152117497,
+          "namespace": "shopify",
+          "key": "age-group",
+          "value": "[\"gid://shopify/Metaobject/106694705401\"]",
+          "type": "list.metaobject_reference"
+        },
+        {
+          "id": 33776152150265,
+          "namespace": "shopify",
+          "key": "target-gender",
+          "value": "[\"gid://shopify/Metaobject/106694836473\"]",
+          "type": "list.metaobject_reference"
+        },
+        {
+          "id": 33776152183033,
+          "namespace": "shopify",
+          "key": "recommended-skill-level",
+          "value": "[\"gid://shopify/Metaobject/106694770937\"]",
+          "type": "list.metaobject_reference"
+        },
+        {
+          "id": 33776152215801,
+          "namespace": "shopify",
+          "key": "snowboard-construction",
+          "value": "[\"gid://shopify/Metaobject/106694738169\"]",
+          "type": "list.metaobject_reference"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830967033,
+      "title": "Selling Plans Ski Wax",
+      "body_html": null,
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "accessories",
+      "handle": "selling-plans-ski-wax",
+      "tags": "Accessory, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:37-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369308921,
+          "product_id": 8882830967033,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Selling Plans Ski Wax",
+            "Special Selling Plans Ski Wax",
+            "Sample Selling Plans Ski Wax"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850432761,
+          "title": "Selling Plans Ski Wax",
+          "sku": null,
+          "price": "24.95",
+          "compare_at_price": null,
+          "option1": "Selling Plans Ski Wax",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470854393,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:43-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 2.0,
+          "weight_unit": "oz",
+          "taxable": true
+        },
+        {
+          "id": 46635850465529,
+          "title": "Special Selling Plans Ski Wax",
+          "sku": null,
+          "price": "49.95",
+          "compare_at_price": null,
+          "option1": "Special Selling Plans Ski Wax",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470887161,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:44-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 2.5,
+          "weight_unit": "oz",
+          "taxable": true
+        },
+        {
+          "id": 46635850498297,
+          "title": "Sample Selling Plans Ski Wax",
+          "sku": null,
+          "price": "9.95",
+          "compare_at_price": null,
+          "option1": "Sample Selling Plans Ski Wax",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470919929,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:43-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.5,
+          "weight_unit": "oz",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865541230841,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snowboard_wax.png?v=1752237398",
+          "alt": "A bar of golden yellow wax",
+          "position": 1,
+          "width": 2881,
+          "height": 2881
+        },
+        {
+          "id": 47865541099769,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/wax-special.png?v=1752237398",
+          "alt": "A bar of purple wax",
+          "position": 2,
+          "width": 2881,
+          "height": 2881
+        },
+        {
+          "id": 47865541198073,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/sample-normal-wax.png?v=1752237398",
+          "alt": "a small cube of wax",
+          "position": 3,
+          "width": 2881,
+          "height": 2881
+        }
+      ],
+      "image": {
+        "id": 47865541230841,
+        "alt": "A bar of golden yellow wax",
+        "position": 1,
+        "product_id": 8882830967033,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:39-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865541230841",
+        "width": 2881,
+        "height": 2881,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snowboard_wax.png?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882831098105,
+      "title": "The 3p Fulfilled Snowboard",
+      "body_html": null,
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "snowboard",
+      "handle": "the-3p-fulfilled-snowboard",
+      "tags": "Accessory, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:38-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369439993,
+          "product_id": 8882831098105,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850662137,
+          "title": "Default Title",
+          "sku": "sku-hosted-1",
+          "price": "2629.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719471083769,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 20,
+              "location_id": 83352781049,
+              "updated_at": "2025-07-11T08:36:44-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865541689593,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg?v=1752237399",
+          "alt": "Top and bottom view of a snowboard. The top view shows 7 stacked hexagons and the bottom view\n          shows a small, centred hexagonal logo for Hydrogen.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865541689593,
+        "alt": "Top and bottom view of a snowboard. The top view shows 7 stacked hexagons and the bottom view\n          shows a small, centred hexagonal logo for Hydrogen.",
+        "position": 1,
+        "product_id": 8882831098105,
+        "created_at": "2025-07-11T08:36:37-04:00",
+        "updated_at": "2025-07-11T08:36:39-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865541689593",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg?v=1752237399",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830934265,
+      "title": "The Archived Snowboard",
+      "body_html": null,
+      "vendor": "Snowboard Vendor",
+      "product_type": "snowboard",
+      "handle": "the-archived-snowboard",
+      "tags": "Archived, Premium, Snow, Snowboard, Sport, Winter",
+      "status": "archived",
+      "published_at": null,
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369276153,
+          "product_id": 8882830934265,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850399993,
+          "title": "Default Title",
+          "sku": null,
+          "price": "629.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470821625,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:45-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865540837625,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_52f8e304-92d9-4a36-82af-50df8fe31c69.jpg?v=1752237398",
+          "alt": "The top and bottom view of a snowboard.The top view is a gradient light purple and dark purple\n        with a cube geometric pattern. The bottom view blue with light blue octagon geometric pattern.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865540837625,
+        "alt": "The top and bottom view of a snowboard.The top view is a gradient light purple and dark purple\n        with a cube geometric pattern. The bottom view blue with light blue octagon geometric pattern.",
+        "position": 1,
+        "product_id": 8882830934265,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865540837625",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_52f8e304-92d9-4a36-82af-50df8fe31c69.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830868729,
+      "title": "The Collection Snowboard: Hydrogen",
+      "body_html": null,
+      "vendor": "Hydrogen Vendor",
+      "product_type": "snowboard",
+      "handle": "the-collection-snowboard-hydrogen",
+      "tags": "Accessory, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:38-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369210617,
+          "product_id": 8882830868729,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850268921,
+          "title": "Default Title",
+          "sku": null,
+          "price": "600.00",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470559481,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:45-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865540968697,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg?v=1752237398",
+          "alt": "Top and bottom view of a snowboard. The top view shows stylized hydrogen bonds and the bottom view\n        shows \u201cH2\u201d in a brush script typeface.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865540968697,
+        "alt": "Top and bottom view of a snowboard. The top view shows stylized hydrogen bonds and the bottom view\n        shows \u201cH2\u201d in a brush script typeface.",
+        "position": 1,
+        "product_id": 8882830868729,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865540968697",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [
+        {
+          "id": 448468615417,
+          "title": "Hydrogen",
+          "type": "custom"
+        }
+      ],
+      "metafields": [
+        {
+          "id": 33569687863545,
+          "namespace": "test_data",
+          "key": "binding_mount",
+          "value": "Optimistic",
+          "type": "single_line_text_field"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882831130873,
+      "title": "The Collection Snowboard: Liquid",
+      "body_html": null,
+      "vendor": "Hydrogen Vendor",
+      "product_type": "snowboard",
+      "handle": "the-collection-snowboard-liquid",
+      "tags": "Accessory, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:39-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369472761,
+          "product_id": 8882831130873,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850727673,
+          "title": "Default Title",
+          "sku": null,
+          "price": "749.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719471149305,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865541722361,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg?v=1752237399",
+          "alt": "Top and bottom view of a snowboard. The top view shows a stylized scene of water, trees, mountains,\n        sky and a moon in blue colours. The bottom view has a blue liquid, drippy background with the text \u201cliquid\u201d in\n        a stylized script typeface.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865541722361,
+        "alt": "Top and bottom view of a snowboard. The top view shows a stylized scene of water, trees, mountains,\n        sky and a moon in blue colours. The bottom view has a blue liquid, drippy background with the text \u201cliquid\u201d in\n        a stylized script typeface.",
+        "position": 1,
+        "product_id": 8882831130873,
+        "created_at": "2025-07-11T08:36:37-04:00",
+        "updated_at": "2025-07-11T08:36:39-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865541722361",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg?v=1752237399",
+        "variant_ids": []
+      },
+      "collections": [
+        {
+          "id": 448468615417,
+          "title": "Hydrogen",
+          "type": "custom"
+        }
+      ],
+      "metafields": [
+        {
+          "id": 33569687929081,
+          "namespace": "test_data",
+          "key": "binding_mount",
+          "value": "Optimistic",
+          "type": "single_line_text_field"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830999801,
+      "title": "The Collection Snowboard: Oxygen",
+      "body_html": null,
+      "vendor": "Hydrogen Vendor",
+      "product_type": "snowboard",
+      "handle": "the-collection-snowboard-oxygen",
+      "tags": "Accessory, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:38-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369341689,
+          "product_id": 8882830999801,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850563833,
+          "title": "Default Title",
+          "sku": null,
+          "price": "1025.00",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470985465,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865541165305,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg?v=1752237398",
+          "alt": "Top and bottom view of a snowboard. The top view shows a stylized scene of trees, mountains, sky and\n        a sun in red colours. The bottom view has blue wavy lines in the background with the text \u201cOxygen\u201d in a\n        stylized script typeface.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865541165305,
+        "alt": "Top and bottom view of a snowboard. The top view shows a stylized scene of trees, mountains, sky and\n        a sun in red colours. The bottom view has blue wavy lines in the background with the text \u201cOxygen\u201d in a\n        stylized script typeface.",
+        "position": 1,
+        "product_id": 8882830999801,
+        "created_at": "2025-07-11T08:36:37-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865541165305",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [
+        {
+          "id": 448468615417,
+          "title": "Hydrogen",
+          "type": "custom"
+        }
+      ],
+      "metafields": [
+        {
+          "id": 33569687896313,
+          "namespace": "test_data",
+          "key": "binding_mount",
+          "value": "Optimistic",
+          "type": "single_line_text_field"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830835961,
+      "title": "The Compare at Price Snowboard",
+      "body_html": null,
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "snowboard",
+      "handle": "the-compare-at-price-snowboard",
+      "tags": "Accessory, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:37-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369177849,
+          "product_id": 8882830835961,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850137849,
+          "title": "Default Title",
+          "sku": null,
+          "price": "785.95",
+          "compare_at_price": "885.95",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470526713,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865541001465,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snowboard_sky.png?v=1752237398",
+          "alt": "Top and bottom view of a snowboard. The top view shows pixelated clouds, with the top-most one being\n        the shape of the Shopify bag logo. The bottom view has a pixelated cloudy sky with blue, pink and purple\n        colours.",
+          "position": 1,
+          "width": 3097,
+          "height": 3908
+        }
+      ],
+      "image": {
+        "id": 47865541001465,
+        "alt": "Top and bottom view of a snowboard. The top view shows pixelated clouds, with the top-most one being\n        the shape of the Shopify bag logo. The bottom view has a pixelated cloudy sky with blue, pink and purple\n        colours.",
+        "position": 1,
+        "product_id": 8882830835961,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865541001465",
+        "width": 3097,
+        "height": 3908,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snowboard_sky.png?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830737657,
+      "title": "The Complete Snowboard",
+      "body_html": "This <b>PREMIUM</b> <i>snowboard</i> is so <b>SUPER</b><i>DUPER</i> awesome!",
+      "vendor": "Snowboard Vendor",
+      "product_type": "snowboard",
+      "handle": "the-complete-snowboard",
+      "tags": "Premium, Snow, Snowboard, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:37-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369079545,
+          "product_id": 8882830737657,
+          "name": "Color",
+          "position": 1,
+          "values": [
+            "Ice",
+            "Dawn",
+            "Powder",
+            "Electric",
+            "Sunset"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850105081,
+          "title": "Ice",
+          "sku": null,
+          "price": "699.95",
+          "compare_at_price": null,
+          "option1": "Ice",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470657785,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 10.0,
+          "weight_unit": "lb",
+          "taxable": true
+        },
+        {
+          "id": 46635850170617,
+          "title": "Dawn",
+          "sku": null,
+          "price": "699.95",
+          "compare_at_price": null,
+          "option1": "Dawn",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470690553,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 10.0,
+          "weight_unit": "lb",
+          "taxable": true
+        },
+        {
+          "id": 46635850203385,
+          "title": "Powder",
+          "sku": null,
+          "price": "699.95",
+          "compare_at_price": null,
+          "option1": "Powder",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470723321,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 10.0,
+          "weight_unit": "lb",
+          "taxable": true
+        },
+        {
+          "id": 46635850236153,
+          "title": "Electric",
+          "sku": null,
+          "price": "699.95",
+          "compare_at_price": null,
+          "option1": "Electric",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470756089,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:45-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 10.0,
+          "weight_unit": "lb",
+          "taxable": true
+        },
+        {
+          "id": 46635850301689,
+          "title": "Sunset",
+          "sku": null,
+          "price": "699.95",
+          "compare_at_price": null,
+          "option1": "Sunset",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470788857,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:47-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 10.0,
+          "weight_unit": "lb",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865540804857,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1752237398",
+          "alt": "Top and bottom view of a snowboard. The top view shows abstract circles and lines in shades of\n          teal. The bottom view shows abstract circles and lines in shades of purple and blue with the text \u201cSHOPIFY\u201d\n          in a sans serif typeface on top.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865540804857,
+        "alt": "Top and bottom view of a snowboard. The top view shows abstract circles and lines in shades of\n          teal. The bottom view shows abstract circles and lines in shades of purple and blue with the text \u201cSHOPIFY\u201d\n          in a sans serif typeface on top.",
+        "position": 1,
+        "product_id": 8882830737657,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865540804857",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [
+        {
+          "id": 33569687601401,
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Complete Snowboard",
+          "type": "string"
+        },
+        {
+          "id": 33569687634169,
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "snowboard winter sport snowboarding",
+          "type": "string"
+        },
+        {
+          "id": 33569687732473,
+          "namespace": "test_data",
+          "key": "snowboard_length",
+          "value": "{\"value\":159.0,\"unit\":\"cm\"}",
+          "type": "dimension"
+        },
+        {
+          "id": 33569687765241,
+          "namespace": "test_data",
+          "key": "snowboard_weight",
+          "value": "{\"value\":7.0,\"unit\":\"lb\"}",
+          "type": "weight"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830704889,
+      "title": "The Draft Snowboard",
+      "body_html": null,
+      "vendor": "Snowboard Vendor",
+      "product_type": "snowboard",
+      "handle": "the-draft-snowboard",
+      "tags": "",
+      "status": "draft",
+      "published_at": null,
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369046777,
+          "product_id": 8882830704889,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850039545,
+          "title": "Default Title",
+          "sku": null,
+          "price": "2629.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470461177,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 20,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:47-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865540641017,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg?v=1752237398",
+          "alt": "Top and bottom view of a snowboard.The top view shows the text \u201chydrogen\u201d in overlapping blue,\n          pink and black font. The bottom view is a purple to blue gradient with white geometric pattern overlay.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865540641017,
+        "alt": "Top and bottom view of a snowboard.The top view shows the text \u201chydrogen\u201d in overlapping blue,\n          pink and black font. The bottom view is a purple to blue gradient with white geometric pattern overlay.",
+        "position": 1,
+        "product_id": 8882830704889,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865540641017",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830672121,
+      "title": "The Hidden Snowboard",
+      "body_html": null,
+      "vendor": "Snowboard Vendor",
+      "product_type": "snowboard",
+      "handle": "the-hidden-snowboard",
+      "tags": "Premium, Snow, Snowboard, Sport, Winter",
+      "status": "active",
+      "published_at": null,
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369014009,
+          "product_id": 8882830672121,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635849875705,
+          "title": "Default Title",
+          "sku": null,
+          "price": "749.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470297337,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:46-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865540739321,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg?v=1752237398",
+          "alt": "The top view and bottom view of a snowboard. The top view is black with a singular peach cube.\n        The bottom view has a graphic of a stack of blocks in a gradient from light blue, to pink to peach.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865540739321,
+        "alt": "The top view and bottom view of a snowboard. The top view is black with a singular peach cube.\n        The bottom view has a graphic of a stack of blocks in a gradient from light blue, to pink to peach.",
+        "position": 1,
+        "product_id": 8882830672121,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865540739321",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [
+        {
+          "id": 33569687503097,
+          "namespace": "test_data",
+          "key": "snowboard_weight",
+          "value": "{\"value\":8.0,\"unit\":\"lb\"}",
+          "type": "weight"
+        },
+        {
+          "id": 33569687535865,
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Hidden Snowboard",
+          "type": "string"
+        },
+        {
+          "id": 33569687568633,
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "hidden snowboard winter sport snowboarding",
+          "type": "string"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830606585,
+      "title": "The Inventory Not Tracked Snowboard",
+      "body_html": null,
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "snowboard",
+      "handle": "the-inventory-not-tracked-snowboard",
+      "tags": "Accessory, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:37-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182368948473,
+          "product_id": 8882830606585,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635849842937,
+          "title": "Default Title",
+          "sku": "sku-untracked-1",
+          "price": "949.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470264569,
+          "inventory_policy": "deny",
+          "inventory_management": null,
+          "inventory_levels": [
+            {
+              "available": null,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:36-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865541067001,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snowboard_purple_hydrogen.png?v=1752237398",
+          "alt": "Top and bottom view of a snowboard. The top view shows a centred hexagonal logo for Hydrogen that\n          appears to radiate outwards, as well as some overlapping hexagons at the bottom. The bottom view shows an\n          abstract angular grid in purples.",
+          "position": 1,
+          "width": 3097,
+          "height": 3908
+        }
+      ],
+      "image": {
+        "id": 47865541067001,
+        "alt": "Top and bottom view of a snowboard. The top view shows a centred hexagonal logo for Hydrogen that\n          appears to radiate outwards, as well as some overlapping hexagons at the bottom. The bottom view shows an\n          abstract angular grid in purples.",
+        "position": 1,
+        "product_id": 8882830606585,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865541067001",
+        "width": 3097,
+        "height": 3908,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/snowboard_purple_hydrogen.png?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [
+        {
+          "id": 448468517113,
+          "title": "Home page",
+          "type": "custom"
+        }
+      ],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830770425,
+      "title": "The Minimal Snowboard",
+      "body_html": null,
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "",
+      "handle": "the-minimal-snowboard",
+      "tags": "",
+      "status": "active",
+      "published_at": null,
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369112313,
+          "product_id": 8882830770425,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850072313,
+          "title": "Default Title",
+          "sku": null,
+          "price": "885.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470493945,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [],
+      "image": null,
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882831032569,
+      "title": "The Multi-location Snowboard",
+      "body_html": null,
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "snowboard",
+      "handle": "the-multi-location-snowboard",
+      "tags": "Premium, Snow, Snowboard, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:37-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369374457,
+          "product_id": 8882831032569,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850596601,
+          "title": "Default Title",
+          "sku": null,
+          "price": "729.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719471018233,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            },
+            {
+              "available": 50,
+              "location_id": 83352748281,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865541132537,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_0a4e9096-021a-4c1e-8750-24b233166a12.jpg?v=1752237398",
+          "alt": "Top and bottom view of a snowboard. The top view shows a pixelated Shopify bag logo and a\n        pixelated character reviewing a clipboard with a questioning expression with a bright green-blue background.\n        The bottom view is a pattern of many pixel characters with a bright green-blue background.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865541132537,
+        "alt": "Top and bottom view of a snowboard. The top view shows a pixelated Shopify bag logo and a\n        pixelated character reviewing a clipboard with a questioning expression with a bright green-blue background.\n        The bottom view is a pattern of many pixel characters with a bright green-blue background.",
+        "position": 1,
+        "product_id": 8882831032569,
+        "created_at": "2025-07-11T08:36:37-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865541132537",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_0a4e9096-021a-4c1e-8750-24b233166a12.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882831065337,
+      "title": "The Multi-managed Snowboard",
+      "body_html": null,
+      "vendor": "Multi-managed Vendor",
+      "product_type": "snowboard",
+      "handle": "the-multi-managed-snowboard",
+      "tags": "Premium, Snow, Snowboard, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:38-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369407225,
+          "product_id": 8882831065337,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850629369,
+          "title": "Default Title",
+          "sku": "sku-managed-1",
+          "price": "629.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719471051001,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            },
+            {
+              "available": 50,
+              "location_id": 83352781049,
+              "updated_at": "2025-07-11T08:36:42-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865541591289,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg?v=1752237399",
+          "alt": "Top and bottom view of a snowboard. The top view shows an illustration with varied outlined shapes\n        in black. The bottom view shows a black box character with an H pointing, and surrounded by black outlined\n        illustrative elements.",
+          "position": 1,
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "image": {
+        "id": 47865541591289,
+        "alt": "Top and bottom view of a snowboard. The top view shows an illustration with varied outlined shapes\n        in black. The bottom view shows a black box character with an H pointing, and surrounded by black outlined\n        illustrative elements.",
+        "position": 1,
+        "product_id": 8882831065337,
+        "created_at": "2025-07-11T08:36:37-04:00",
+        "updated_at": "2025-07-11T08:36:39-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865541591289",
+        "width": 1600,
+        "height": 1600,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg?v=1752237399",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [
+        {
+          "id": 33569687830777,
+          "namespace": "test_data",
+          "key": "snowboard_length",
+          "value": "{\"value\":159.0,\"unit\":\"cm\"}",
+          "type": "dimension"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830901497,
+      "title": "The Out of Stock Snowboard",
+      "body_html": null,
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "snowboard",
+      "handle": "the-out-of-stock-snowboard",
+      "tags": "Accessory, Sport, Winter",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:37-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369243385,
+          "product_id": 8882830901497,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850367225,
+          "title": "Default Title",
+          "sku": null,
+          "price": "885.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470625017,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 0,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:36-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865540903161,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg?v=1752237398",
+          "alt": "Top and bottom view of a snowboard. The top view shows a toggle at the top in shades of blue and\n        yellow. The bottom view shows an abstract illustration of toggles in blues and yellows.",
+          "position": 1,
+          "width": 3908,
+          "height": 3908
+        }
+      ],
+      "image": {
+        "id": 47865540903161,
+        "alt": "Top and bottom view of a snowboard. The top view shows a toggle at the top in shades of blue and\n        yellow. The bottom view shows an abstract illustration of toggles in blues and yellows.",
+        "position": 1,
+        "product_id": 8882830901497,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865540903161",
+        "width": 3908,
+        "height": 3908,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8882830803193,
+      "title": "The Videographer Snowboard",
+      "body_html": null,
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "snowboard",
+      "handle": "the-videographer-snowboard",
+      "tags": "",
+      "status": "active",
+      "published_at": "2025-07-11T08:36:37-04:00",
+      "template_suffix": null,
+      "options": [
+        {
+          "id": 11182369145081,
+          "product_id": 8882830803193,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46635850334457,
+          "title": "Default Title",
+          "sku": null,
+          "price": "885.95",
+          "compare_at_price": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48719470592249,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 50,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-11T08:36:44-04:00"
+            }
+          ],
+          "barcode": null,
+          "weight": 0.0,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 47865540673785,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main.jpg?v=1752237398",
+          "alt": "The top and bottom view of a snowboard. The top has view is turquoise and black with graphics of\n        trees. The bottom view is turquoise with the word hydrogen written in cursive.",
+          "position": 1,
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "image": {
+        "id": 47865540673785,
+        "alt": "The top and bottom view of a snowboard. The top has view is turquoise and black with graphics of\n        trees. The bottom view is turquoise with the word hydrogen written in cursive.",
+        "position": 1,
+        "product_id": 8882830803193,
+        "created_at": "2025-07-11T08:36:36-04:00",
+        "updated_at": "2025-07-11T08:36:38-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/47865540673785",
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/Main.jpg?v=1752237398",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8899155427577,
+      "title": "ThunderCrave\u2122 \u2013 Electric Pulse Cruiser",
+      "body_html": "<ul>\n<li data-start=\"156\" data-end=\"214\">\n<p data-start=\"158\" data-end=\"214\">8.5\u201d ergonomic maple deck with glow-in-the-dark finish</p>\n</li>\n<li data-start=\"215\" data-end=\"272\">\n<p data-start=\"217\" data-end=\"272\">Integrated <strong data-start=\"228\" data-end=\"251\">LED underglow strip</strong> with motion sensor</p>\n</li>\n<li data-start=\"273\" data-end=\"323\">\n<p data-start=\"275\" data-end=\"323\">Soft 60mm cruiser wheels for ultra-smooth ride</p>\n</li>\n<li data-start=\"324\" data-end=\"372\">\n<p data-start=\"326\" data-end=\"372\">ABEC-7 chrome bearings for speed &amp; stability</p>\n</li>\n<li data-start=\"373\" data-end=\"414\">\n<p data-start=\"375\" data-end=\"414\">Engraved <strong data-start=\"384\" data-end=\"412\">lightning bolt grip tape</strong></p>\n</li>\n<li data-start=\"415\" data-end=\"488\">\n<p data-start=\"417\" data-end=\"488\">Designed for night rides, cruising, and attention-grabbing street style</p>\n</li>\n</ul>",
+      "vendor": "eCommerce Test Store Demo",
+      "product_type": "",
+      "handle": "thundercrave\u2122-electric-pulse-cruiser",
+      "tags": "",
+      "status": "active",
+      "published_at": "2025-07-26T07:52:48-04:00",
+      "template_suffix": "",
+      "options": [
+        {
+          "id": 11200448168185,
+          "product_id": 8899155427577,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 46679949345017,
+          "title": "Default Title",
+          "sku": null,
+          "price": "12500.00",
+          "compare_at_price": "15000.00",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "inventory_item_id": 48762457817337,
+          "inventory_policy": "deny",
+          "inventory_management": "shopify",
+          "inventory_levels": [
+            {
+              "available": 10,
+              "location_id": 83352715513,
+              "updated_at": "2025-07-26T07:52:51-04:00"
+            },
+            {
+              "available": 10,
+              "location_id": 83352748281,
+              "updated_at": "2025-07-26T07:52:51-04:00"
+            }
+          ],
+          "barcode": "",
+          "weight": 22.3,
+          "weight_unit": "kg",
+          "taxable": true
+        }
+      ],
+      "images": [
+        {
+          "id": 48087800643833,
+          "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/cycle.jpg?v=1753530707",
+          "alt": null,
+          "position": 1,
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "image": {
+        "id": 48087800643833,
+        "alt": null,
+        "position": 1,
+        "product_id": 8899155427577,
+        "created_at": "2025-07-26T07:51:46-04:00",
+        "updated_at": "2025-07-26T07:51:47-04:00",
+        "admin_graphql_api_id": "gid://shopify/ProductImage/48087800643833",
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0759/6199/1417/files/cycle.jpg?v=1753530707",
+        "variant_ids": []
+      },
+      "collections": [],
+      "metafields": [
+        {
+          "id": 33776237478137,
+          "namespace": "shopify",
+          "key": "color-pattern",
+          "value": "[\"gid://shopify/Metaobject/106695655673\"]",
+          "type": "list.metaobject_reference"
+        },
+        {
+          "id": 33776237510905,
+          "namespace": "shopify",
+          "key": "age-group",
+          "value": "[\"gid://shopify/Metaobject/106694705401\"]",
+          "type": "list.metaobject_reference"
+        },
+        {
+          "id": 33776237543673,
+          "namespace": "shopify",
+          "key": "target-gender",
+          "value": "[\"gid://shopify/Metaobject/106694836473\"]",
+          "type": "list.metaobject_reference"
+        },
+        {
+          "id": 33776237576441,
+          "namespace": "shopify",
+          "key": "material",
+          "value": "[\"gid://shopify/Metaobject/106696999161\",\"gid://shopify/Metaobject/106697031929\"]",
+          "type": "list.metaobject_reference"
+        },
+        {
+          "id": 33776237609209,
+          "namespace": "shopify",
+          "key": "bicycle-features",
+          "value": "[\"gid://shopify/Metaobject/106697064697\"]",
+          "type": "list.metaobject_reference"
+        }
+      ],
+      "discount_rules": [
+        {
+          "id": 1449254945017,
+          "title": "CODE_DISCOUNT_BLACKFRIDAY",
+          "value_type": "percentage",
+          "value": "-80.0",
+          "starts_at": "2025-11-27T19:00:00-05:00",
+          "ends_at": "2025-11-28T19:00:00-05:00",
+          "codes": [
+            "CODE_DISCOUNT_BLACKFRIDAY"
+          ]
+        },
+        {
+          "id": 1449254912249,
+          "title": "FREESHIPPING2025",
+          "value_type": "percentage",
+          "value": "-100.0",
+          "starts_at": "2024-12-31T19:00:00-05:00",
+          "ends_at": "2025-12-31T18:59:59-05:00",
+          "codes": [
+            "FREESHIPPING2025"
+          ]
+        }
+      ]
+    }
+  ],
+  "price_rules_total": 3
+}
